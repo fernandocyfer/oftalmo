@@ -1,0 +1,82 @@
+
+.Footer
+    background: #003057
+    color: white
+    padding: 2rem 1rem
+    text-align: left
+    display: flex
+    justify-content: space-between
+    .LogoBox
+        width: 120px
+        height: 80px
+    ul
+        list-style: none
+        padding: 0
+        margin: 0
+        li
+            margin: 2rem 1rem
+            a
+                font-weight: 700
+                font-size: 16px
+                line-height: 24px
+                color: #007AFF
+                text-decoration: none
+                &:hover
+                    color: green
+                &:first-of-type
+
+            &:first-of-type
+                margin-left: 0
+
+.Copyright
+    display: flex
+    justify-content: space-between
+    
+.SocialMedia
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid #333F51
+    background-color: #003057
+    color: white
+    padding: 2rem 1rem
+    a
+        text-decoration: none
+        &:hover
+            color: green
+    ul
+        list-style: none
+        margin: 0
+        li
+            margin: 0 1rem
+            cursor: pointer
+            a
+                font-weight: 700
+                font-size: 16px
+                line-height: 24px
+                color: #A8A8A8
+                text-decoration: none
+                img
+
+                &:hover
+                    color: green
+            &:first-of-type
+                margin-left: 0
+    p
+        margin: 0
+        font-weight: 300 !important
+
+
+@media screen and (max-width: 767px)
+    .Copyright
+        flex-direction: column-reverse
+        gap: 30px
+        align-items: center
+        text-align: center
+
+
+@media screen and (max-width: 767px)
+    .Footer
+        ul
+            li
+                margin: 2rem 0
+

@@ -1,0 +1,62 @@
+
+@import variables
+.StatisticBox
+    //width: 205px
+    //height: 65px
+
+.ImageStatistic
+    padding: 15px
+    min-width: 120px
+    max-width: 120px
+    min-height: 120px
+    max-height: 120px
+    background: #FFFFFF
+    box-shadow: 0px 6px 25px rgba(0, 114, 197, 0.18)
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $color-blue-dark
+.Title
+    font-family: 'Open Sans'
+    font-weight: 700 !important
+    font-size: 36px
+    line-height: 49px
+    margin: 0 15px
+    color: #ffffff
+
+.subTitle
+    font-family: 'Open Sans'
+    font-style: normal
+    font-weight: 700 !important
+    font-size: 14px
+    line-height: 19px
+    color: #ffffff
+
+.boxDescription
+    margin: 0 15px
+    display: flex
+    flex-direction: column
+    width: 170px
+    h2,
+    p
+        margin: 0
+
+
+@media (max-width: 676px)
+    .ImageStatistic
+        min-width: 74px
+        max-width: 74px
+        min-height: 74px
+        max-height: 74px
+
+    .Title
+        font-size: 16px
+        line-height: 22px
+
+    .subTitle
+        font-size: 10px
+        line-height: 14px
+
+    .boxDescription
+        width: auto

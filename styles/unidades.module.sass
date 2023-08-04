@@ -1,0 +1,218 @@
+
+@import 'variables'
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+
+
+.unidades
+    height: 411px
+    background-size: cover !important
+    background-position: center
+    background-repeat: no-repeat !important
+    display: flex
+    align-items: center
+    //background: linear-gradient(90deg, rgba(72, 156, 255, 0.6375) 0%, rgba(255, 255, 255, 0.1875) 100%), url(../public/images/container1-bg.png)
+    background: url(../public/banner/unidadesBanner.webp)
+
+@media screen and (max-width: 1060px)
+    .unidades, .overlay
+        height: 90vh
+    .overlay
+        opacity: 0.9
+
+@media screen and (max-width: 767px)
+    .unidades
+        height: 32vh
+        background-position-x: center
+
+
+
+
+
+.Hero
+    width: 700px
+    //width: auto
+    //margin-left: 7.5vw
+    //backdrop-filter: blur(4px)
+    border-radius: 16px
+    padding: 30px
+    h1
+        color: #FFFFFF
+        font-size: 32px
+        text-align: center
+        font-weight: 700
+        line-height: 44px
+        font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+    p
+        color: $color-white
+        padding: 1rem 0
+        text-align: center
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+    .heroButtons
+        display: flex
+        justify-content: center
+
+    button:nth-child(2)
+        margin: 0 0 0 1rem
+
+
+
+@media screen and (max-width: 676px)
+    .Hero
+        padding: 30px 0
+        backdrop-filter: none
+        h1
+            font-size: 16px
+            line-height: 22px
+
+        button:nth-child(2)
+            display: none
+
+.breadUnidades
+    background-color: #002340
+    color: $color-white
+    display: flex
+    align-items: center
+    height: 68px
+
+.unidadesContainer
+    display: flex
+    margin: 60px 0
+
+.boxUnidade
+    display: flex
+    flex-direction: column
+    justify-content: center
+    //align-items: center
+    width: 320px
+    height: 481px
+    background: #FFFFFF
+    border: 2px solid rgba(207, 207, 207, 0.5)
+    border-radius: 4px
+    gap: 16px
+    padding: 16px
+    margin: 16px
+
+    .boxUm
+        display: flex
+        gap: 16px
+        align-items: center
+
+    .boxDois
+        display: flex
+        flex-direction: column
+
+    h4
+        font-size: 20px
+        font-weight: 700
+        line-height: 27px
+        color: #003057
+
+    p
+        font-size: 12px
+        font-weight: 500
+        line-height: 16px
+        color: #002340
+
+
+.SectionFour
+    padding: 4rem
+    background-color: #2671AD
+    text-align: center
+    margin: 1rem 0
+    color: red
+
+    h4
+        font-weight: 700
+        font-size: 32px
+        line-height: 44px
+        text-align: center
+        color: #FFFFFF !important
+        margin: 1rem 0
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        text-align: center
+        color: #FFFFFF !important
+
+    span
+        filter: invert(1)
+
+    .principaisConvenios
+        display: flex
+        justify-content: center
+        gap: 32px
+
+        img
+            box-shadow: 0px 0px 30px rgba(0, 114, 197, 0.1)
+            border-radius: 2px
+            filter: inherit
+            width: 210px !important
+
+
+.secundariosConvenios
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 30px
+    padding: 14px
+
+
+
+.SectionTwelve
+    margin: 120px 0
+    span
+        font-weight: 700
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 0.18em
+        text-transform: uppercase
+        color: #FF5C00
+
+    .container .row
+        flex-direction: column
+.Faq
+    margin-left: 4rem
+    .accordionItem
+        background: #FFFFFF
+        border: 0
+        box-shadow: 0px 6px 10px rgba(0, 48, 87, 0.05)
+        .accordionBody
+            background: #FFFFFF
+        button
+            background: #FFFFFF
+            border-radius: 8px
+            margin: 0.5rem 0
+            &::after
+                background-image: url("../public/icons/expand-icon.svg")
+
+            &:focus
+                outline: none
+                border: 0
+                box-shadow: none
+
+        h6
+            font-family: 'Open Sans'
+            border-radius: 8px
+            font-weight: 700
+            font-size: 20px
+            line-height: 25px
+            color: #003057
+            border: none
+
+        p
+            font-family: 'Open Sans'
+            font-style: normal
+            font-weight: 300
+            font-size: 16px
+            line-height: 22px
+            color: #003057
+
+@media media screen and (max-width:767px)
+.Faq
+    margin: 0

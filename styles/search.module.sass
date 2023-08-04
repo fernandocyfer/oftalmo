@@ -1,0 +1,94 @@
+
+.search
+  padding: 50px 0
+
+  p
+    color: #0C1D3A
+    font-size: 16px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+
+  input
+    width: 45%
+    padding: 15px 15px 15px 50px
+    margin-left: -20px
+
+  button
+    //width: 10%
+    height: 54px
+    margin-left: 2rem
+
+  svg:first-of-type
+    margin-left: -30px
+    transform: rotate(0deg)
+    transform-origin: center center
+    transition: transform ease-in-out 100ms
+
+  select
+    width: 45%
+    border-radius: 2px
+    outline: 0
+    padding: 16px
+    margin-left: 16px
+
+    -webkit-appearance: none
+
+    &:focus ~ svg:first-of-type
+      transform: rotate(180deg)
+      transform-origin: center center
+      transition: transform ease-in-out 100ms
+
+    option
+      font-size: 16px
+      font-style: normal
+      font-weight: 400
+
+
+.searchInput
+  display: flex
+  align-items: center
+
+  &::before
+    content: 'AB'
+    color: transparent
+    width: 20px
+    height: 20px
+    position: relative
+    left: 20px
+    outline: 0
+    background-image: url("../public/icons/search.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+
+.line
+  margin: 65px 0
+
+.resultBox
+  padding: 17px 15px
+  border-radius: 4px
+  background: #E0E8FA
+
+  span
+    color: #1C82F9
+    font-size: 14px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+
+
+.results
+  width: 100%
+  display: flex
+  padding: 20px
+  padding-top: 32px
+  justify-content: space-around
+
+  button
+    margin: 16px
+    font-size: 18px
+    font-style: normal
+    font-weight: 700
+    line-height: normal

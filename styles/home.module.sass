@@ -1,0 +1,624 @@
+
+@import 'variables'
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+.Hero
+  //width: 647px
+  width: auto
+  margin-left: 7.5vw
+  backdrop-filter: blur(4px)
+  border-radius: 16px
+  padding: 30px
+
+  h1
+    color: #003057
+    font-size: 32px
+    font-weight: 700
+    line-height: 44px
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+  p
+    color: $color-blue-dark
+    padding: 1rem 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+  button:nth-child(2)
+    margin: 0 0 0 1rem
+
+
+@media screen and (max-width: 676px)
+  .Hero
+    padding: 30px 0
+    backdrop-filter: none
+
+    h1
+      font-size: 16px
+      line-height: 22px
+
+    button:nth-child(2)
+      display: none
+
+
+.SelectBox
+  display: flex
+  margin-top: -5.5rem
+  border-radius: 8px
+  justify-content: space-between
+  background-color: transparent
+
+@media (max-width: 676px)
+  .SelectBox
+    flex-direction: column
+    gap: 35px
+    align-items: center
+    background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
+    margin: -5px 0
+    border: none
+
+
+.SectionTwo
+  padding-top: 4.375rem
+  background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
+  display: flex
+  justify-content: center
+
+  .SectionTwo_container
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 40px 0
+    background-color: #fff
+    margin-top: -12vw
+    box-shadow: 0px 6px 45px rgba(0, 114, 197, 0.18)
+    border-radius: 2px
+
+  button
+    color: white
+    margin: 4rem 0 0 0
+
+    #containerDoisSobreposto
+      background-color: #fff !important
+      display: none !important
+
+.SectionTwoMobile
+  display: block
+
+@media screen and (min-width: 767px)
+  .SectionTwoMobile
+    display: none
+
+@media (max-width: 767px)
+  .SectionTwo
+    display: none
+
+.SectionTwo_boxTwo
+  padding: 0 2rem
+
+  p, h2, button
+    margin: 8px auto
+    color: #002340
+
+  p
+    color: #003057
+    font-weight: 400
+    line-height: 22px
+
+  h2
+    font-size: 25px
+    font-weight: 700 !important
+    line-height: 34px
+
+@media scree and (max-width: 767px)
+
+.SectionTwo_boxTwo
+  h2
+    font-size: 16px
+    line-height: 22px
+    width: 100% !important
+
+  p
+    font-size: 12px
+    line-height: 16px
+
+.mtoDoido
+  background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
+  display: flex
+  justify-content: center
+  padding: 90px 20px 200px
+
+@media (max-width: 676px)
+  .mtoDoido
+    padding: 0px 0px 50px
+
+
+.maisDoidoAinda
+  display: flex
+  flex-wrap: wrap
+  column-gap: 16px
+  margin-bottom: 18px
+
+.unidadesBtnDois
+  display: inline-flex
+
+.containerTwo
+  display: flex
+  justify-content: center
+
+.SectionFour
+  padding-top: 5rem
+  background-color: white
+  text-align: center
+  margin: 1rem 0
+  color: red
+
+  h4
+    font-weight: 700
+    font-size: 32px
+    line-height: 44px
+    text-align: center
+    color: #000000
+    margin: 1rem 0
+
+  p
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+    color: #212529
+
+  .SectionFourActionButton
+    margin: 4rem 0 8rem
+
+    p
+      font-weight: 700
+      font-size: 14px
+      line-height: 19px
+
+  button
+
+
+@media screen and (min-width: 768px)
+  .mtodoido
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  .especialidadesMobile
+    display: none
+
+
+.SectionFour
+  .SectionFourActionButton
+    padding: 0 50px
+
+    p
+      text-align: center
+      line-height: 24px
+
+
+@media screen and (max-width: 767px)
+
+  .mtodoido
+    display: none
+
+  .especialidadesMobile
+    display: flex
+
+  .SectionFour
+    text-align: left
+
+    h4
+      text-align: left
+      font-size: 16px !important
+      line-height: 21px !important
+
+    p
+      text-align: left
+      font-size: 14px
+      line-height: 21px
+
+
+.SectionFive
+  text-align: center
+
+  .glassFrame
+    width: 90%
+    text-align: right
+
+.SectionSix
+  text-align: center
+  margin: 5rem auto
+
+  h4
+    font-weight: 700
+    font-size: 32px
+    line-height: 44px
+    text-align: center
+    margin: 1rem 0
+
+  p
+    margin: 2rem 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+
+  button
+  //margin: 1rem auto
+
+  .buttonsContainer
+    //width: 80%
+    width: 70%
+    gap: 16px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 1rem 0
+
+    button
+      &:last-of-type
+        margin-top: 2rem
+
+.SectionSeven
+  background: rgba(207, 207, 207, 0.15)
+  margin: 5rem auto
+  padding: 5rem
+
+  .oftalmoKids
+    margin: 10px 14px
+
+  button
+    width: 50%
+    margin-left: 15px
+    margin-top: -7px
+
+.SectionEight
+  text-align: center
+  background: #FFFFFF
+  padding: 2rem
+  margin: 5rem auto
+  box-shadow: 0px 6px 15px rgba(0, 114, 197, 0.18)
+  border-radius: 30px
+
+.Banner
+  //width: 1300px
+  //margin: 5rem auto
+  //width: 1260px
+  width: 1100px
+  text-align: center
+
+  p
+    margin: 2rem 0
+
+.slideKids
+  //width: 1260px
+  width: 100% !important
+  padding: 15px
+  box-shadow: 0px 6px 15px rgba(0, 114, 197, 0.18)
+  border-radius: 4px
+  margin-top: 4rem
+  text-align: center
+
+.SectionNine
+  margin: 8rem auto 5rem auto
+
+  .slideDepoiments
+    // background-color: blue
+    padding: 0
+    margin: -2rem
+
+.SectionTen
+  text-align: center
+  margin: 2rem auto
+  padding: 2rem 0
+  background: rgba(207, 207, 207, 0.1)
+
+  h4
+    font-weight: 700
+    font-size: 32px
+    line-height: 44px
+    text-align: center
+    margin: 1rem 70px
+
+  p
+    margin: 2rem 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+
+  button
+    margin: 1rem
+
+    &:last-of-type
+      margin-top: 3rem
+
+  .Convenios
+    background: #FFFFFF
+    box-shadow: 0px 6px 45px rgba(0, 114, 197, 0.18)
+    border-radius: 4px
+//padding: 1rem 2rem
+
+
+.SectionEleven
+  text-align: center
+  margin: 5rem auto
+
+  h4
+    font-weight: 700
+    font-size: 32px
+    line-height: 44px
+    text-align: center
+    margin: 1rem 0
+
+  p
+    margin: 2rem 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-align: center
+
+  button
+    margin: 1rem 1rem
+
+    &:last-of-type
+      margin-top: 5rem
+
+  .PostBlog
+    display: flex
+
+.SectionTwelve
+  margin: 120px 0
+
+  span
+    font-weight: 700
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.18em
+    text-transform: uppercase
+    color: #FF5C00
+
+  .container .row
+    flex-direction: column
+
+.Faq
+  margin-left: 4rem
+
+  .accordionItem
+    background: #FFFFFF
+    border: 0
+    box-shadow: 0px 6px 10px rgba(0, 48, 87, 0.05)
+
+    .accordionBody
+      background: #FFFFFF
+
+    button
+      background: #FFFFFF
+      border-radius: 8px
+      margin: 0.5rem 0
+
+      &::after
+        background-image: url("../public/icons/expand-icon.svg")
+
+      &:focus
+        outline: none
+        border: 0
+        box-shadow: none
+
+    h6
+      font-family: 'Open Sans'
+      border-radius: 8px
+      font-weight: 700
+      font-size: 20px
+      line-height: 25px
+      color: #003057
+      border: none
+
+    p
+      font-family: 'Open Sans'
+      font-style: normal
+      font-weight: 300
+      font-size: 16px
+      line-height: 22px
+      color: #003057
+
+@media screen and (max-width: 767px)
+
+.Faq
+  margin: 0
+
+.SectionThirteen
+  background: radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)
+  color: white
+  text-align: center
+  padding: 5rem 0
+
+  .Contact
+    text-align: center
+    display: flex
+    justify-content: space-between
+    margin: 2rem auto
+
+    button
+      color: white
+
+      &::nth-of-type(3)
+        margin: 10px 0
+
+    .ContactItem
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      p
+        margin: 10px 0 0
+        font-weight: 700
+        font-size: 22px
+        line-height: 30px
+        text-align: center
+        color: #FFFFFF
+
+      button
+        &:nth-last-of-type(1)
+          margin: 10px 0
+
+@media screen and (max-width: 767px)
+
+  .Contact
+    display: grid !important
+    gap: 15px
+
+    .ContactItem
+      flex-direction: initial !important
+      justify-content: normal
+      gap: 25px
+
+      p
+        font-size: 12px !important
+
+      button
+        font-size: 12px !important
+
+
+.FormContainer
+  background: #FFFFFF
+  box-shadow: 0px 6px 15px rgba(0, 114, 197, 0.18)
+  border-radius: 2.24px
+  padding: 1rem
+  color: $color-black
+  align-items: center
+  text-align: left
+  font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+  margin-left: 8%
+  margin-right: 8%
+
+  h5
+    padding: 1rem
+    font-weight: 700
+    font-size: 25px
+    line-height: 38px
+    color: #003057
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+  .formPhoto
+    //width: 80%
+    //padding: 14px
+    border-radius: 2px
+
+  .formWrapper
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 1rem
+
+  .formGroup
+    padding: 0 1rem
+    display: flex
+    flex-direction: column
+    text-align: left
+
+    label
+      margin: 0.2rem 0
+      font-weight: 600
+      font-size: 12px
+      line-height: 13px
+      color: #002340
+
+@media screen and (max-width: 767px)
+  .FormContainer
+    div
+      &:nth-last-of-type(1)
+        flex-direction: column
+
+    .formPhoto
+      span
+        width: 270px !important
+
+    h5
+      font-size: 16px
+      line-height: 18px
+
+    .formWrapper
+      padding: 1rem 0
+
+    .formGroup
+      button
+        min-width: 180px
+
+
+.boxGeral
+  display: flex
+  justify-content: center
+
+.boxxx
+  width: 415px
+  margin: 30px
+
+  .postsBox
+    background: #fff
+    box-shadow: 6px 6px 15px rgba(0, 114, 197, 0.12)
+    border-radius: 4px
+    padding: 14px
+
+    img
+      width: 100%
+      height: 163px
+      object-fit: cover
+
+    h2
+      font-size: 20px
+      font-weight: 700
+      color: #002340
+      line-height: 27px
+      text-align: left
+
+    .postDate
+      color: #B6B6B6
+      font-size: 16px
+      font-weight: 700
+      line-height: 20px
+      text-align: left
+      margin: 0
+
+    .postExcerpt
+      text-align: left
+      margin: 1rem 0
+
+    .postReadMore
+      text-align: right
+      color: #0075FF
+      font-size: 16px
+      display: flex
+      justify-content: flex-end
+
+@media screen and (max-width: 676px)
+  .boxGeral
+    flex-direction: column
+    align-items: center
+
+
+.SectionFourteen
+  background: #Ffffff
+
+@media screen and (max-width: 1450px)
+  .SectionTwo_boxTwo
+    padding: 2rem 2rem
+
+    p
+      //width: 80%
+      //width: 90%
+      margin: 1rem 0
+      font-size: 14px
+
+    h2
+      width: 80%
+      margin: 2px 0
+
+    button
+      //margin: 2rem 0 0 0
+      margin-top: 10px
+      color: #fff
+      column-gap: 8px

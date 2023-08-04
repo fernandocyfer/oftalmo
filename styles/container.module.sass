@@ -1,0 +1,68 @@
+
+@import 'variables'
+
+.Container_cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.ContainerDefault
+    h4
+        margin: 1rem 0rem
+        font-weight: 700
+        font-size: 25px
+        line-height: 34px
+        color: #003057
+    p
+        margin: 1.5rem 0
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        color: #002340
+
+.ContainerVariant
+    padding: 4rem 0
+    color: $color_white
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    span
+        color: $color_white
+
+.ContainerDark
+    color: $color_white
+    h4
+        font-weight: 700
+        font-size: 32px
+        line-height: 44px
+    p
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+    span
+        color: $color_white
+
+
+@media screen and (max-width: 767px)
+    .ContainerDark
+        h4
+            font-size: 16px
+            line-height: 22px
+
+        p
+            font-size: 12px
+            line-height: 16px
+
+.Label__Star
+    display: flex
+    justify-content: center
+    color: #003057
+    margin: 0.5rem 0
+
+@media screen and (max-width: 767px)
+    .Label__Star
+        justify-content: left
+
+.label_Label
+    h4
+        display: none

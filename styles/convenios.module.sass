@@ -1,0 +1,101 @@
+@import 'variables'
+
+.Convenios
+  background: url('../public/images/conveniosbg.png')
+  padding: 2rem 0
+  background-size: cover
+  background-repeat: no-repeat
+  height: 30vw
+
+.principaisConvenios
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 32px
+
+  img
+    box-shadow: 0px 0px 30px rgba(0, 114, 197, 0.1)
+    border-radius: 2px
+
+.principaisBox
+  text-align: center
+  padding: 64px
+  margin: 4rem 0
+  background-image: url('../public/banner/rectangle.svg')
+  background-size: cover
+
+  border-radius: 4px
+  color: #fff
+  text-transform: uppercase
+
+  h2
+    font-size: 18px
+    padding-bottom: 50px
+    font-weight: 700
+
+.secundariosConvenios
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 30px
+  padding: 14px
+
+
+.SectionTwelve
+  margin: 120px 0
+
+  span
+    font-weight: 700
+    font-size: 18px
+    line-height: 25px
+    letter-spacing: 0.18em
+    text-transform: uppercase
+    color: #FF5C00
+
+  .container .row
+    flex-direction: column
+
+.Faq
+  margin-left: 4rem
+
+  .accordionItem
+    background: #FFFFFF
+    border: 0
+    box-shadow: 0px 6px 10px rgba(0, 48, 87, 0.05)
+
+    .accordionBody
+      background: #FFFFFF
+
+    button
+      background: #FFFFFF
+      border-radius: 8px
+      margin: 0.5rem 0
+
+      &::after
+        background-image: url("../public/icons/expand-icon.svg")
+
+      &:focus
+        outline: none
+        border: 0
+        box-shadow: none
+
+    h6
+      font-family: 'Open Sans'
+      border-radius: 8px
+      font-weight: 700
+      font-size: 20px
+      line-height: 25px
+      color: #003057
+      border: none
+
+    p
+      font-family: 'Open Sans'
+      font-style: normal
+      font-weight: 300
+      font-size: 16px
+      line-height: 22px
+      color: #003057
+
+@media screen and (max-width: 767px)
+  .Faq
+    margin: 0
