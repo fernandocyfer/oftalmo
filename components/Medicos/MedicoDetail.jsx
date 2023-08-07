@@ -1,7 +1,5 @@
 const MedicoDetail = () => {
-    return (<>
-
-    </>)
+  return <></>
 }
 
-export default MedicoDetail;
+export default MedicoDetail

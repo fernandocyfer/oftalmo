@@ -1,9 +1,8 @@
-
 import Head from 'next/head'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
-export default function CustomHead({title,description}) {
-  const router=useRouter()
+export default function CustomHead({ title, description }) {
+  const router = useRouter()
 
   return (
     <Head>
@@ -20,7 +19,7 @@ export default function CustomHead({title,description}) {
       <link rel="manifest" href="/manifest.json" />
       <link
         rel="canonical"
-        href={'https://americasoftalmocenter'+router.pathname}
+        href={'https://americasoftalmocenter' + router.pathname}
       />
       <meta property="og:locale" content="pt_BR" />
       <meta property="og:type" content="website" />
