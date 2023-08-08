@@ -1,4 +1,4 @@
-import { Button } from '../components/Button/Button'
+import {Button} from '../components/Button/Button'
 import Container from '../components/Container/Container'
 import SingleContainer from '../components/SingleContainer/SingleContainer'
 import styles from '../styles/convenios.module.sass'
@@ -44,309 +44,91 @@ import tempoLogo from '../public/logo/convenios/tempo-logo.svg'
 
 // Import Swiper styles
 import 'swiper/css'
-import { Accordion } from 'react-bootstrap'
+import {Accordion} from 'react-bootstrap'
 import Banner from '../components/Banner/Banner'
 import Breadcrum from '../components/BreadCrumb/Breadcrum'
 import Search from '../components/Search/Search'
 import CardConvResult from '../components/Cards/CardConvResult'
+import Faq from "../components/Faq/faq";
 
 export default function Convenios() {
-  return (
-    <>
-      <Banner id={4}>
-        <SingleContainer
-          title={'Atendimento Oftalmológico por Planos de Saúde e Convênios'}
-          description={
-            'Oferecemos atendimentos oftalmológicos de qualidade para pacientes particulares e com convênios. Nossos médicos oftalmologistas atendem uma ampla variedade de convênios e planos de saúde no Rio de Janeiro, para garantir que nossos serviços sejam acessíveis para o maior número possível de pacientes.'
-          }
-        >
-          <Button title={'Agendar consulta'} id={1} />
-          <Button title={'Emergência Oftalmológica'} id={6} />
-        </SingleContainer>
-      </Banner>
+    return (<>
+        <Banner id={4}>
+            <SingleContainer
+                title={'Atendimento Oftalmológico por Planos de Saúde e Convênios'}
+                description={'Oferecemos atendimentos oftalmológicos de qualidade para pacientes particulares e com convênios. Nossos médicos oftalmologistas atendem uma ampla variedade de convênios e planos de saúde no Rio de Janeiro, para garantir que nossos serviços sejam acessíveis para o maior número possível de pacientes.'}
+            >
+                <Button title={'Agendar consulta'} id={1}/>
+                <Button title={'Emergência Oftalmológica'} id={6}/>
+            </SingleContainer>
+        </Banner>
 
-      <Breadcrum title={' Convênios'} />
+        <Breadcrum title={' Convênios'}/>
 
-      <Search id={1}>
-        <CardConvResult />
-        <CardConvResult />
-      </Search>
+        <Search id={1}>
+            <CardConvResult/>
+            <CardConvResult/>
+        </Search>
 
-      <div className="container">
-        <div className="row">
-          <div className={styles.principaisBox}>
-            <h2>Nossos convênios</h2>
-            <div className={styles.principaisConvenios}>
-              <Image width={210} height={210} src={amilLogo} />
-              <Image width={210} height={210} src={bradescoLogo} />
-              <Image width={210} height={210} src={sulamericaLogo} />
-              <Image width={210} height={210} src={saudeassimLogo} />
-              <Image width={210} height={210} src={petrobrasLogo} />
-              <Image width={210} height={210} src={caixaLogo} />
-              <Image width={210} height={210} src={cassiLogo} />
-              <Image width={210} height={210} src={goldencrossLogo} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="col-12">
-          <div className={styles.secundariosConvenios}>
-            <Image src={allianzLogo} />
-            <Image src={amafrerjLogo} />
-            <Image src={ambepLogo} />
-            <Image src={camprjLogo} />
-            <Image src={correiosLogo} />
-          </div>
-          <div className={styles.secundariosConvenios}>
-            <Image src={eletrossaudeLogo} />
-            <Image src={embrapaLogo} />
-            <Image src={fiosaudeLogo} />
-            <Image src={gamaLogo} />
-            <Image src={notredameLogo} />
-          </div>
-          <div className={styles.secundariosConvenios}>
-            <Image src={lifeLogo} />
-            <Image src={marinhaLogo} />
-            <Image src={mediServiceLogo} />
-            <Image src={mutuaLogo} />
-            <Image src={omintLogo} />
-          </div>
-          <div className={styles.secundariosConvenios}>
-            <Image src={pameLogo} />
-            <Image src={pasaLogo} />
-            <Image src={petrobrasLogo} />
-            <Image src={postalsaudeLogo} />
-            <Image src={realgrandezaLogo} />
-          </div>
-
-          <div className={styles.secundariosConvenios}>
-            <Image src={sompoLogo} />
-            <Image src={tempoLogo} />
-            <Image src={unafiscoLogo} />
-            <Image src={unimedLogo} />
-            <Image src={valeLogo} />
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.SectionTwelve}>
         <div className="container">
-          <div className="row">
-            <div className="col-md-5">
-              <Button title={'FAQ'} id={11} style={{ marginLeft: '32px' }} />
-              <Container
-                idLabel={2}
-                label={'FAQ'}
-                title={'Tire suas Dúvidas'}
-                content={
-                  ' Está com alguma dúvida sobre os serviços de um oftalmologista e como podemos lhe ajudar? Fique tranquilo(a) pois separamos as perguntas frequentes. Por isso, confira e tire suas dúvidas com a gente!'
-                }
-              />
-            </div>
-            <div className="col-md-7">
-              <div className={styles.Faq}>
-                <div className={styles.FaqItem}>
-                  <div className={styles.FaqTitle}>
-                    <Accordion>
-                      <Accordion.Item
-                        eventKey="0"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>
-                            Qual é o melhor plano de saúde do Rio de Janeiro?{' '}
-                          </h6>
-                        </Accordion.Header>
-                        <Accordion.Body className={styles.accordionBody}>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="1"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>
-                            Quais são os oftalmologistas que atendem pela
-                            Unimed?
-                          </h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="2"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>
-                            Quais são as clínicas conveniadas com a Unimed?
-                          </h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="3"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>Qual oftalmologista que atende Amil?</h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="4"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>Como marcar consulta no plano assim?</h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="5"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>Quais as clínicas que aceitam Bradesco saúde?</h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="6"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>
-                            Como marcar consulta no convênio Porto Seguro?
-                          </h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="7"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>O que cobre o plano essencial da Allianz? </h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                      <Accordion.Item
-                        eventKey="8"
-                        className={styles.accordionItem}
-                      >
-                        <Accordion.Header className={styles.accordionHeader}>
-                          <h6>Qual a rede credenciada Fiosaúde?</h6>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur. Tortor sed
-                            blandit cursus enim metus. Amet sed ultrices leo
-                            dictum arcu in lacus at. Faucibus pulvinar lorem
-                            amet mauris.
-                            <br />
-                            <br />
-                            Venenatis malesuada at nec velit vitae duis velit.
-                            Pellentesque quam dictum ut id nascetur.
-                          </p>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                    </Accordion>
-                  </div>
+            <div className="row">
+                <div className={styles.principaisBox}>
+                    <h2>Nossos convênios</h2>
+                    <div className={styles.principaisConvenios}>
+                        <Image width={210} height={210} src={amilLogo}/>
+                        <Image width={210} height={210} src={bradescoLogo}/>
+                        <Image width={210} height={210} src={sulamericaLogo}/>
+                        <Image width={210} height={210} src={saudeassimLogo}/>
+                        <Image width={210} height={210} src={petrobrasLogo}/>
+                        <Image width={210} height={210} src={caixaLogo}/>
+                        <Image width={210} height={210} src={cassiLogo}/>
+                        <Image width={210} height={210} src={goldencrossLogo}/>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </>
-  )
+
+        <div className="container">
+            <div className="col-12">
+                <div className={styles.secundariosConvenios}>
+                    <Image src={allianzLogo}/>
+                    <Image src={amafrerjLogo}/>
+                    <Image src={ambepLogo}/>
+                    <Image src={camprjLogo}/>
+                    <Image src={correiosLogo}/>
+                </div>
+                <div className={styles.secundariosConvenios}>
+                    <Image src={eletrossaudeLogo}/>
+                    <Image src={embrapaLogo}/>
+                    <Image src={fiosaudeLogo}/>
+                    <Image src={gamaLogo}/>
+                    <Image src={notredameLogo}/>
+                </div>
+                <div className={styles.secundariosConvenios}>
+                    <Image src={lifeLogo}/>
+                    <Image src={marinhaLogo}/>
+                    <Image src={mediServiceLogo}/>
+                    <Image src={mutuaLogo}/>
+                    <Image src={omintLogo}/>
+                </div>
+                <div className={styles.secundariosConvenios}>
+                    <Image src={pameLogo}/>
+                    <Image src={pasaLogo}/>
+                    <Image src={petrobrasLogo}/>
+                    <Image src={postalsaudeLogo}/>
+                    <Image src={realgrandezaLogo}/>
+                </div>
+
+                <div className={styles.secundariosConvenios}>
+                    <Image src={sompoLogo}/>
+                    <Image src={tempoLogo}/>
+                    <Image src={unafiscoLogo}/>
+                    <Image src={unimedLogo}/>
+                    <Image src={valeLogo}/>
+                </div>
+            </div>
+        </div>
+
+        <Faq id={4}/>
+    </>)
 }
