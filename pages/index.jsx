@@ -192,7 +192,7 @@ export default function Home({}) {
                         <div className={styles.SectionTwo_boxTwo}>
                             <Button title={'Nossas Clínicas'} id={11}/>
                             <h2>
-                                A American Oftalmocenter conta com 5 unidades no Rio de
+                                A American Oftalmocenter conta com 5 unidades <br/>no Rio de
                                 Janeiro.
                             </h2>
                             <p>
@@ -203,6 +203,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Barra da Tijuca'}
+                                        to={'/unidades'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -210,6 +211,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Del Castilho Zona Norte'}
+                                        to={'/unidades'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -217,6 +219,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={' Unidade Bota fogo Zona Sul'}
+                                        to={'/unidades'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -224,6 +227,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Méier'}
+                                        to={'/unidades'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -231,6 +235,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Tijuca'}
+                                        to={'/unidades'}
                                         id={4}
                                         icon={locationIcon}
                                     />

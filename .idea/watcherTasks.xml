@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4147f058428b48db121fa028c68538452443cccf38aba5c77b42b14276d6666
-size 141
-=======
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectTasksOptions" suppressed-tasks="Sass" />
 </project>
->>>>>>> 336dca3171eb0dd8d5e4f31295882864b3bd26bc
