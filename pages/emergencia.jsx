@@ -81,7 +81,7 @@ const emergencia = () => (
                     <Image src={Line.src} width={251} height={2} />
 
                     <p>Unidade Botafogo - Zona Sul</p>
-                    <Button title={'Emergência Oftalmologica'} id={5} />
+                    <Button title={'Emergência Oftalmologica'} id={15} />
                   </div>
                 </div>
               </div>

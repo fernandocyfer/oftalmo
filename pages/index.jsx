@@ -411,6 +411,7 @@ export default function Home({}) {
                             Acesse o site da <b>Americas OftalmoKids</b> para saber mais.
                         </p>
                         <Button
+                            style={{maxWidth: '200px'}}
                             title={'Visitar Oftalmokids'}
                             id={1}
                             to={'/oftalmokids'}
