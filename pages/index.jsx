@@ -100,6 +100,7 @@ export default function Home({}) {
         fetchMedicos()
     }, [])
 
+
     return (<>
         <CustomHead title={'Americas Oftalmocenter'}/>
 
@@ -307,34 +308,42 @@ export default function Home({}) {
                 <div className={styles.mtodoido}>
                     <CardEspecialidades
                         title={'Cirurgia de Catarata'}
+                        href={'/especialidades/Cirurgia de Catarata'}
                         image={cardEspecialidades1}
                     />
                     <CardEspecialidades
                         title={'Crosslinking'}
+                        href={'/servicos/especialidades/Crosslinking'}
                         image={cardEspecialidades2}
                     />
                     <CardEspecialidades
                         title={'Vitrectomia'}
+                        href={'/servicos/especialidades/Vitrectomia'}
                         image={cardEspecialidades3}
                     />
                     <CardEspecialidades
                         title={'Cirurgia de refrativa'}
+                        href={'/servicos/especialidades/Cirurgia de refrativa'}
                         image={cardEspecialidades4}
                     />
                     <CardEspecialidades
                         title={'Buraco macular'}
+                        href={'/servicos/especialidades/Buraco macular'}
                         image={cardEspecialidades5}
                     />
                     <CardEspecialidades
                         title={'Blefaropastia'}
+                        href={'/servicos/especialidades/Blefaropastia'}
                         image={cardEspecialidades6}
                     />
                     <CardEspecialidades
                         title={'Cirurgia Antiglaucomatosa'}
+                        href={'/servicos/especialidades/Cirurgia Antiglaucomatosa'}
                         image={cardEspecialidades7}
                     />
                     <CardEspecialidades
                         title={'Lentes de contato'}
+                        href={'/servicos/especialidades/Lentes de contato'}
                         image={cardEspecialidades8}
                     />
                 </div>

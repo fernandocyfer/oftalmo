@@ -1,97 +1,140 @@
+@import 'variables'
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+
 .SimpleContainer
-    margin: 60px 0
+  margin: 60px 0
 
 .Line
-    margin: 30px 0
-    width: 277px
-    height: 2px
-    background: #E0E8FA
+  margin: 30px 0
+  width: 277px
+  height: 2px
+  background: #E0E8FA
 
 .especialidades
-    border-radius: 2px
-    background: rgba(255, 92, 0, 0.15)
-    width: 180px
-    padding: 3px 11px
-    color: #FF5C00
+  border-radius: 2px
+  background: rgba(255, 92, 0, 0.15)
+  width: 180px
+  padding: 3px 11px
+  color: #FF5C00
+  font-family: 'Noto', sans-serif
+  font-size: 14px
+  font-style: normal
+  font-weight: 700
+  line-height: normal
+  letter-spacing: 2.52px
+  text-transform: uppercase
+
+.boxEspecialidades
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  text-align: left
+
+  span
+    margin: 16px 50px 16px 0
+    color: #0075FF
     font-family: 'Noto', sans-serif
-    font-size: 14px
+    font-size: 18px
     font-style: normal
     font-weight: 700
     line-height: normal
-    letter-spacing: 2.52px
-    text-transform: uppercase
-
-.boxEspecialidades
-    display: flex
-    align-items: flex-start
-    flex-wrap: wrap
-    text-align: left
-
-    span
-        margin: 16px 50px 16px 0
-        color: #0075FF
-        font-family: 'Noto', sans-serif
-        font-size: 18px
-        font-style: normal
-        font-weight: 700
-        line-height: normal
 
 .marqueConsulta
-    border-radius: 4px
+  border-radius: 4px
+  border: 1.333px solid #003057
+  background: #FFF
+  padding: 50px 21px
+
+  p
+    font-family: 'Noto' sans-serif
+    font-size: 16px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+
+  .textUnidade
+    color: #0075FF
+    margin: 21px 0
+
+  .boxMarque
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 21px 32px
+    border-radius: 2.667px
     border: 1.333px solid #003057
-    background: #FFF
-    padding: 50px 21px
+    width: 80%
+    margin: 0 auto
 
     p
-        font-family: 'Noto' sans-serif
-        font-size: 16px
-        font-style: normal
-        font-weight: 700
-        line-height: normal
+      color: #003057
+      font-family: 'Noto', sans-serif
+      font-size: 18px
+      font-style: normal
+      font-weight: 700
+      line-height: normal
+      margin: 0
 
-    .textUnidade
-        color: #0075FF
-        margin: 21px 0
+  .lineMarque
+    height: 2px
+    background: #F0F9FF
 
-    .boxMarque
-        display: flex
-        justify-content: center
-        align-items: center
-        padding: 21px 32px
-        border-radius: 2.667px
-        border: 1.333px solid #003057
-        width: 80%
-        margin: 0 auto
-
-        p
-            color: #003057
-            font-family: 'Noto', sans-serif
-            font-size: 18px
-            font-style: normal
-            font-weight: 700
-            line-height: normal
-            margin: 0
-
-    .lineMarque
-        height: 2px
-        background: #F0F9FF
-
-    .unidadesAtend
-        padding: 21px
+  .unidadesAtend
+    padding: 21px
 
 .docPicBorder
-    width: 320px
-    height: 320px
-    background-image: url('../public/images/circle.svg')
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
+  width: 320px
+  height: 320px
+  background-image: url('../public/images/circle.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
 
 .infoDoc
-    h2
-        color: #003057
-        font-family: 'Noto', sans-serif
-        font-size: 25px
-        font-style: normal
-        font-weight: 700
-        line-height: normal
+  h2
+    color: #003057
+    font-family: 'Noto', sans-serif
+    font-size: 25px
+    font-style: normal
+    font-weight: 700
+    line-height: normal
+
+
+.Hero
+  //width: 647px
+  width: auto
+  margin-left: 7.5vw
+  border-radius: 16px
+  padding: 30px
+  text-align: center
+
+  h1
+    color: white
+    font-size: 32px
+    font-weight: 700
+    line-height: 44px
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+  p
+    color: white
+    padding: 1rem 0
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    font-family: 'Noto Sans SC', Helvetica, arial, sans-serif
+
+  button:nth-child(2)
+    margin: 0 0 0 1rem
+
+@media screen and (max-width: 676px)
+  .Hero
+    padding: 30px 0
+    backdrop-filter: none
+
+    h1
+      font-size: 16px
+      line-height: 22px
+
+    button:nth-child(2)
+      display: none
