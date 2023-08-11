@@ -8,6 +8,7 @@ import equipeBanner from '../../public/banner/equipeBanner.svg'
 import convBanner from '../../public/banner/convenios.svg'
 import oftamoKids from '../../public/banner/oftamokidsBanner.svg'
 import especialidade1 from '../../public/banner/especialidade1.svg'
+import ogrupo from '../../public/banner/ogrupoBanner.svg'
 
 import {useRouter} from 'next/router'
 
@@ -24,6 +25,8 @@ export default function Banner(props) {
                 background: `url('${unidadeSingle.src}')`, height: '55vh', display: 'flex', justifyContent: 'center'
             } : id === 3 ? {
                 background: `url('${servicoBanner.src}')`, height: '511px'
+            } : id === 11 ? {
+                background: `url('${ogrupo.src}')`, height: '511px'
             } : id === 10 ? {
                 background: `url('${examesBanner.src}')`, height: '511px'
             } : id === 9 ? {

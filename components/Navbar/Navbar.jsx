@@ -16,8 +16,12 @@ export default function Navbar({footer}) {
         {name: 'Home', href: '/'},
         {
             name: 'O Grupo',
-            href: '',
+            href: '/ogrupo',
             subRoutes: [
+                {
+                    name: 'O Grupo',
+                    href: '/ogrupo'
+                },
                 {
                     name: 'Oftalmokids',
                     href: '/oftalmokids'
@@ -54,11 +58,10 @@ export default function Navbar({footer}) {
             subRoutes: [
                 {
                     name: 'Blog',
-                    href: '/'
+                    href: 'https://wordpress-576870-3751630.cloudwaysapps.com/'
                 }
             ]
-        },
-        {name: 'Catarata', href: '/'}
+        }
     ]
 
     const router = useRouter()

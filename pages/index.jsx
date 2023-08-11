@@ -110,7 +110,7 @@ export default function Home({}) {
 
         <Banner id={1}>
             <div className="container-fluid">
-                <div className="row">
+                <div>
                     <div className="col-md-6">
                         <div className={styles.Hero}>
                             <h1>
@@ -392,7 +392,7 @@ export default function Home({}) {
                 className="container"
                 style={{background: 'rgba(207, 207, 207, 0.15)'}}
             >
-                <div className="row">
+                <div>
                     <div className="col-lg-5 col-md-5 col-sm-12 p-0">
                         <Image src={oftalmoPic}/>
                     </div>
@@ -427,7 +427,7 @@ export default function Home({}) {
                 className="container"
                 style={{background: 'rgba(207, 207, 207, 0.15)'}}
             >
-                <div className="row">
+                <div>
                     <div className={styles.slideKids}>
                         <Swiper
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -499,7 +499,7 @@ export default function Home({}) {
 
         <div className={styles.SectionEleven}>
             <div className="container">
-                <div className="row">
+                <div>
                     <div className="col-md-12">
                         <Button title={'Aprenda mais'} id={11}/>
                         <Container
