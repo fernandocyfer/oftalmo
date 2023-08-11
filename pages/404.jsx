@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import {Button} from '../components/Button/Button'
 import styles from '../styles/404.module.sass'
-import ImageError from '../public/banner/error404.svg'
+import ImageError from '../public/banner/error404.webp'
 import DivisorError from '../public/images/divisor404.svg'
 import Container from '../components/Container/Container'
 
