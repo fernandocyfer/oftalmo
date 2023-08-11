@@ -392,11 +392,12 @@ export default function Home({}) {
                 className="container"
                 style={{background: 'rgba(207, 207, 207, 0.15)'}}
             >
-                <div>
+                <div className={'d-lg-flex d-md-flex flex-lg-row flex-sm-column'}>
+
                     <div className="col-lg-5 col-md-5 col-sm-12 p-0">
                         <Image src={oftalmoPic}/>
                     </div>
-                    <div className="col-lg-7 col-md-7 col-sm-12 d-flex flex-column">
+                    <div className="col-lg-7 col-md-7  d-flex flex-column">
                         <div className={styles.oftalmoKids}>
                             <Image src={oftalmoKids}/>
                         </div>
@@ -420,6 +421,7 @@ export default function Home({}) {
                             to={'/oftalmokids'}
                         />
                     </div>
+
                 </div>
             </div>
 
