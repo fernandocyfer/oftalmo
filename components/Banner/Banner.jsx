@@ -9,6 +9,7 @@ import convBanner from '../../public/banner/convenios.webp'
 import oftamoKids from '../../public/banner/oftamokidsBanner.webp'
 import especialidade1 from '../../public/banner/especialidade1.webp'
 import ogrupo from '../../public/banner/ogrupoBanner.webp'
+import unidadesBanner from '../../public/banner/unidadesBanner.webp'
 
 import {useRouter} from 'next/router'
 
@@ -37,6 +38,8 @@ export default function Banner(props) {
                 background: `url('${convBanner.src}')`, height: '511px'
             } : id === 7 ? {
                 background: `url('${oftamoKids.src}')`, backgroundSize: 'contain', height: '85vh'
+            } : id === 12 ? {
+                background: `url('${unidadesBanner.src}')`, backgroundSize: 'contain', height: '85vh'
             } : id === 8 ? {
                 background: `url('${especialidade1.src}')`, backgroundSize: 'contain', height: '511px'
             } : {

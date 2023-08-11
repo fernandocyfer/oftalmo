@@ -45,6 +45,8 @@ import tempoLogo from '../public/logo/convenios/tempo-logo.svg'
 import axios from 'axios'
 import {useEffect, useState} from 'react'
 import Faq from "../components/Faq/faq";
+import Banner from "../components/Banner/Banner";
+import SingleContainer from "../components/SingleContainer/SingleContainer";
 
 export default function Unidades({data}) {
     const [listUnidades, setListUnidades] = useState([])
@@ -56,34 +58,19 @@ export default function Unidades({data}) {
 
     return (
         <>
-            <div className={styles.unidades}>
-                <div className="container-xxl">
-                    <div className="row justify-content-center">
-                        <div className="col-md-6">
-                            <div className={styles.Hero}>
-                                <h1>
-                                    A Clínica Oftalmológica mais completa do Rio de Janeiro.
-                                </h1>
-                                <p>
-                                    Agende agora sua consulta em uma de nossas unidades. Contamos
-                                    com oftalmologistas na Barra da Tijuca, Botafogo, Méier, Nova
-                                    América – Del Castilho e Tijuca.
-                                </p>
-                                <div className={styles.heroButtons}>
-                                    <Button
-                                        title={'Agendar consulta'}
-                                        id={10}
-                                        to={
-                                            'https://web.whatsapp.com/send?phone=552124961161&text='
-                                        }
-                                    />
-                                    <Button title={'Emergência Oftalmológica'} id={6} to={'/'}/>
-                                </div>
-                            </div>
-                        </div>
+            <Banner id={11}>
+                <SingleContainer
+                    title={'A Clínica Oftalmológica mais completa do Rio de Janeiro.'}
+                    description={'Agende agora sua consulta em uma de nossas unidades. Contamos com oftalmologistas na Barra da Tijuca, Botafogo, Méier, Nova América – Del Castilho e Tijuca.'}
+                >
+                    <div className={'d-flex justify-content-center pt-3'}>
+                        <Button title={'Agendar consulta'} id={10}
+                                to={'https://web.whatsapp.com/send?phone=552124961161&text='}/>
+                        <Button title={'Emergência Oftalmológica'} id={6} to={'/'}/>
                     </div>
-                </div>
-            </div>
+                </SingleContainer>
+            </Banner>
+
 
             <div className={styles.breadUnidades}>
                 <div className="container">

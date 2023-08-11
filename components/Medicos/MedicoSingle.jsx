@@ -16,7 +16,7 @@ const MedicoSingle = ({ medico }) => {
                   ? medico.image
                   : erro.src
               }
-              style={{ width: '300px', height: '375px' }}
+              style={{ width: '300px', height: '300px' }}
             />
           </div>
           <div className={styles.medicosSingle_Description}>

@@ -1,4 +1,3 @@
-
 @import variables
 
 .oftamokidsContainer
@@ -221,3 +220,19 @@
   background-image: url('../public/banner/rodape.webp')
   background-position: center
   background-size: cover
+
+
+@media screen and (max-width: 750px)
+  .card
+    margin: 20px auto !important
+
+    &:first-of-type
+      margin-top: 100px !important
+
+  .containerColorir
+    flex-direction: column
+    margin-top: 200px
+    margin-bottom: 100px
+
+    .desc, .image
+      width: 90%
