@@ -83,6 +83,7 @@ import MedicoConsulta from '../components/Medicos/MedicoConsulta'
 import {useEffect, useState} from 'react'
 import {getMedicos} from '../services/app.service'
 import Modal from "../components/Modal/Modal";
+import {useWindowSize} from "@uidotdev/usehooks";
 
 export default function Home({}) {
     const [listaMostrada, handleListaMostrada] = useState([])
@@ -99,6 +100,9 @@ export default function Home({}) {
         }
         fetchMedicos()
     }, [])
+
+
+    const size = useWindowSize()
 
 
     return (<>
@@ -143,7 +147,6 @@ export default function Home({}) {
                 </p>
                 <div className="form-group">
                     <select
-                        onChange="window.location.href=this.value;"
                         className="form-control-lg"
                         name="unidades"
                     >
@@ -270,32 +273,32 @@ export default function Home({}) {
             </div>
         </div>
         <div className="container containerStatisticBoxMobile">
-            <div className="row justify-content-center">
-                <div>
-                    <div className={styles.SelectBox}>
-                        <CardDiferencialFirst
-                            title={'Profissionais altamente qualificados'}
-                            description={'Garantimos que todos os nossos oftalmologistas são altamente qualificados para lhe atender'}
-                            image={diferencial1}
-                        />
-                        <CardDiferencialFirst
-                            title={'Equipamentos de última geração'}
-                            description={'Nossas unidades possuem equipamentos modernos para prover os melhores resultados.'}
-                            image={diferencial2}
-                        />
-                        <CardDiferencialFirst
-                            title={'Centro cirúrgico próprio'}
-                            description={'Contamos com centro cirúrgico próprio com os equipamentos mais modernos para realizar cirurgias oculares.'}
-                            image={diferencial3}
-                        />
-                        <CardDiferencialFirst
-                            title={'Ambiente moderno, confortável e humanizado'}
-                            description={'Nossas unidades contam com estrutura moderna e confortável'}
-                            image={diferencial4}
-                        />
-                    </div>
+            <div className="justify-content-center">
+
+                <div className={styles.SelectBox}>
+                    <CardDiferencialFirst
+                        title={'Profissionais altamente qualificados'}
+                        description={'Garantimos que todos os nossos oftalmologistas são altamente qualificados para lhe atender'}
+                        image={diferencial1}
+                    />
+                    <CardDiferencialFirst
+                        title={'Equipamentos de última geração'}
+                        description={'Nossas unidades possuem equipamentos modernos para prover os melhores resultados.'}
+                        image={diferencial2}
+                    />
+                    <CardDiferencialFirst
+                        title={'Centro cirúrgico próprio'}
+                        description={'Contamos com centro cirúrgico próprio com os equipamentos mais modernos para realizar cirurgias oculares.'}
+                        image={diferencial3}
+                    />
+                    <CardDiferencialFirst
+                        title={'Ambiente moderno, confortável e humanizado'}
+                        description={'Nossas unidades contam com estrutura moderna e confortável'}
+                        image={diferencial4}
+                    />
                 </div>
             </div>
+
         </div>
         <div className={styles.SectionFour}>
             <Button title={'Nossas especialidades'} id={11}/>
@@ -376,7 +379,7 @@ export default function Home({}) {
                 idLabel={1}
             ></Container>
 
-            <div className={'container d-flex justify-content-around mt-5 mb-5'}>
+            <div className={'container d-flex justify-content-around mt-5 mb-5 flex-wrap'}>
                 {listaMostrada.map((medico, i) => {
                     return <MedicoSingle medico={medico} key={i}/>
                 })}
@@ -390,10 +393,10 @@ export default function Home({}) {
                 style={{background: 'rgba(207, 207, 207, 0.15)'}}
             >
                 <div className="row">
-                    <div className="col-5 p-0">
+                    <div className="col-lg-5 col-md-5 col-sm-12 p-0">
                         <Image src={oftalmoPic}/>
                     </div>
-                    <div className="col-7 d-flex flex-column">
+                    <div className="col-lg-7 col-md-7 col-sm-12 d-flex flex-column">
                         <div className={styles.oftalmoKids}>
                             <Image src={oftalmoKids}/>
                         </div>
@@ -429,7 +432,7 @@ export default function Home({}) {
                         <Swiper
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
                             spaceBetween={15}
-                            slidesPerView={5}
+                            slidesPerView={size.width >= '770' ? 5 : 1}
                             Autoplay={true}
                             HashNavigation={true}
                             grabCursor={true}
