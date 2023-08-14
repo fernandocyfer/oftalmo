@@ -2,17 +2,22 @@ import styles from '../../styles/home.module.sass'
 import Container from '../Container/Container'
 import Image from 'next/image'
 import whatsAppIcon from '../../public/icons/whatsapp-blue-icon.png'
-import { Button } from '../Button/Button'
+import {Button} from '../Button/Button'
 import phoneIcon from '../../public/icons/phone-blue-icon.png'
 import pcIcon from '../../public/icons/pc-blue-icon.png'
 import formPhoto from '../../public/images/form-photo.webp'
-import { Form, InputGroup } from 'react-bootstrap'
+import {Form,InputGroup} from 'react-bootstrap'
 import userIcon from '../../public/icons/person-icon.svg'
 import mailIcon from '../../public/icons/mail.svg'
 import telIcon from '../../public/icons/call.svg'
+import {useWindowSize} from '@uidotdev/usehooks'
 
-const FormAtendimento = ({ hasContact = true }) => (
-  <>
+const FormAtendimento=({hasContact=true}) => {
+
+  const size=useWindowSize()
+
+
+  return (<>
     <div className={styles.SectionThirteen}>
       <div className="container">
         <div className="row">
@@ -30,7 +35,7 @@ const FormAtendimento = ({ hasContact = true }) => (
             />
             <div
               className="col-12 d-flex flex-column"
-              style={{ padding: '2rem 0' }}
+              style={{padding: '2rem 0'}}
             >
               <div className="col-12">
                 <div className={styles.Contact}>
@@ -58,10 +63,10 @@ const FormAtendimento = ({ hasContact = true }) => (
                 </div>
               </div>
             </div>
-            {hasContact ? (
+            {hasContact? (
               <div
                 className={styles.FormContainer}
-                style={hasContact ? { marginBottom: '-40%' } : null}
+                style={hasContact? {marginBottom: '-40%'}:null}
               >
                 <div className="col-12 d-flex justify-content-center porraa">
                   <div className="col-5 d-flex align-items-center">
@@ -138,7 +143,7 @@ const FormAtendimento = ({ hasContact = true }) => (
                   </div>
                 </div>
               </div>
-            ) : null}
+            ):null}
           </div>
         </div>
       </div>
@@ -146,9 +151,9 @@ const FormAtendimento = ({ hasContact = true }) => (
 
     <div
       className={styles.SectionFourteen}
-      style={hasContact ? { padding: '15rem 0' } : null}
+      style={hasContact&&size.width>800? {padding: '15rem 0'}:hasContact&&size.width<800? {padding: '5rem 0'}:null}
     ></div>
   </>
-)
-
+  )
+}
 export default FormAtendimento
