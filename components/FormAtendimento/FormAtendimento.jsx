@@ -40,24 +40,44 @@ const FormAtendimento=({hasContact=true}) => {
               <div className="col-12">
                 <div className={styles.Contact}>
                   <div className={styles.ContactItem}>
-                    <div className={styles.ContactIcon}>
-                      <Image src={whatsAppIcon} />
+                    <div className='d-flex align-items-center'>
+                      <div className={styles.ContactIcon}>
+                        <Image src={whatsAppIcon} />
+                      </div>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <p>(21) 2496-1161</p>
                     </div>
-                    <p>(21) 2496-1161</p>
+
                     <Button dark title={'Converse pelo WhatsApp'} id={2} />
                   </div>
                   <div className={styles.ContactItem}>
-                    <div className={styles.ContactIcon}>
-                      <Image src={phoneIcon} />
+                    <div className='d-flex align-items-center'>
+                      <div className={styles.ContactIcon}>
+                        <Image src={phoneIcon} />
+                      </div>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <p>(21) 2496-1161</p>
+
                     </div>
-                    <p>(21) 2496-1161</p>
                     <Button dark title={'Ligue agora'} id={2} />
                   </div>
-                  <div className={styles.ContactItem}>
-                    <div className={styles.ContactIcon}>
-                      <Image src={pcIcon} />
+                  <div className='d-flex align-items-center'>
+                    <div className={styles.ContactItem}>
+                      <div className={styles.ContactIcon}>
+                        <Image src={pcIcon} />
+                      </div>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      <p>Agendamento Online</p>
                     </div>
-                    <p>Agendamento Online</p>
                     <Button dark title={'Reserve agora'} id={2} />
                   </div>
                 </div>

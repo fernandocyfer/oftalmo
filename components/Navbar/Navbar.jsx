@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import logoWhite from '../../public/white-logo.svg'
 import logo from '../../public/logo.webp'
 import Image from 'next/image'
 import styles from '../../styles/navbar.module.sass'
@@ -12,8 +13,8 @@ export default function Navbar({footer}) {
         return classes.filter(Boolean).join(' ')
     }
 
-    const navigation = [
-        {name: 'Home', href: '/'},
+    const navigation=[
+        {name: 'Home',href: '/'},
         {
             name: 'O Grupo',
             href: '/ogrupo',
@@ -32,8 +33,8 @@ export default function Navbar({footer}) {
             name: 'Equipe Médica',
             href: '/equipe'
         },
-        {name: 'Convênios', href: '/convenios'},
-        {name: 'Unidades', href: '/unidades'},
+        {name: 'Convênios',href: '/convenios'},
+        {name: 'Unidades',href: '/unidades'},
         {
             name: 'Serviços',
             href: '',
@@ -64,7 +65,7 @@ export default function Navbar({footer}) {
         }
     ]
 
-    const router = useRouter()
+    const router=useRouter()
 
     return (
         <>
@@ -85,16 +86,16 @@ export default function Navbar({footer}) {
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul className="navbar-nav">
                                     {navigation.map(item => {
-                                        if (!item.subRoutes?.length > 0) {
+                                        if(!item.subRoutes?.length>0) {
                                             return (
                                                 <Link href={item.href} key={item.name}>
                                                     <a
                                                         className={classNames(
                                                             'inline-flex items-center m-3 px-1 pt-1 border-b-2 text-sm font-medium',
-                                                            router.route === item.href ? styles.current : null
+                                                            router.route===item.href? styles.current:null
                                                         )}
                                                         aria-current={
-                                                            router.route === item.href ? 'page' : undefined
+                                                            router.route===item.href? 'page':undefined
                                                         }
                                                     >
                                                         <li
@@ -109,13 +110,13 @@ export default function Navbar({footer}) {
                                         } else {
                                             return (
                                                 <a
-                                                    style={{margin: '0.7rem', color: 'blue'}}
+                                                    style={{margin: '0.7rem',color: 'blue'}}
                                                     className={classNames(
                                                         'inline-flex items-center px-1 border-b-2 text-sm font-medium',
-                                                        router.route === item.href ? styles.current : null
+                                                        router.route===item.href? styles.current:null
                                                     )}
                                                     aria-current={
-                                                        router.route === item.href ? 'page' : undefined
+                                                        router.route===item.href? 'page':undefined
                                                     }
                                                 >
                                                     <li
@@ -137,14 +138,14 @@ export default function Navbar({footer}) {
                                                                     <a
                                                                         className={classNames(
                                                                             'inline-flex items-center border-b-2 text-sm font-medium dropdown-item',
-                                                                            router.route === item.href
+                                                                            router.route===item.href
                                                                                 ? styles.current
-                                                                                : null
+                                                                                :null
                                                                         )}
                                                                         aria-current={
-                                                                            router.route === item.href
+                                                                            router.route===item.href
                                                                                 ? 'page'
-                                                                                : undefined
+                                                                                :undefined
                                                                         }
                                                                     >
                                                                         <li
@@ -175,7 +176,7 @@ export default function Navbar({footer}) {
 
                 <div className={styles.mobileMenu}>
                     <div className="d-flex gap-3 navMobileEmergency">
-                        <Image width={45} height={45} src={btnEmergency} to={'/'}/>
+                        <Image width={45} height={45} src={btnEmergency} to={'/'} />
                     </div>
                     <button
                         className="btn btn-primary"
@@ -184,7 +185,7 @@ export default function Navbar({footer}) {
                         data-bs-target="#offcanvasRight"
                         aria-controls="offcanvasRight"
                     >
-                        <Image alt="image-alt" title="image-title" src={hamburguer}/>
+                        <Image alt="image-alt" title="image-title" src={hamburguer} />
                     </button>
 
                     <div
@@ -199,7 +200,7 @@ export default function Navbar({footer}) {
                                 <Image
                                     alt="image-alt"
                                     title="image-title"
-                                    src={logo}
+                                    src={logoWhite}
                                     objectFit="contain"
                                     className={styles.logo}
                                 />
@@ -217,10 +218,10 @@ export default function Navbar({footer}) {
                                     <a
                                         className={classNames(
                                             'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium',
-                                            router.route === item.href ? styles.current : null
+                                            router.route===item.href? styles.current:null
                                         )}
                                         aria-current={
-                                            router.route === item.href ? 'page' : undefined
+                                            router.route===item.href? 'page':undefined
                                         }
                                     >
                                         {item.name}

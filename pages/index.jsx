@@ -62,8 +62,8 @@ import formPhoto from '../public/images/form-photo.webp'
 
 import oftalmoKids from '../public/logo/logo-oftalmokids.png'
 
-import {Swiper, SwiperSlide} from 'swiper/react'
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import {Swiper,SwiperSlide} from 'swiper/react'
+import {Navigation,Pagination,Scrollbar,A11y} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -73,40 +73,40 @@ import 'swiper/css/scrollbar'
 import 'swiper/css'
 import CardDepoimentos from '../components/Cards/CardDepoimentos'
 import CardPostBlog from '../components/Cards/CardPostBlog'
-import {Accordion, Form, InputGroup} from 'react-bootstrap'
+import {Accordion,Form,InputGroup} from 'react-bootstrap'
 import Faq from '../components/Faq/faq'
 import Depoimentos from '../components/Depoimentos/Depoimentos'
 import PlanosConvenios from '../components/PlanosConvenios/PlanosConvenios'
 import FormAtendimento from '../components/FormAtendimento/FormAtendimento'
 import MedicoSingle from '../components/Medicos/MedicoSingle'
 import MedicoConsulta from '../components/Medicos/MedicoConsulta'
-import {useEffect, useState} from 'react'
+import {useEffect,useState} from 'react'
 import {getMedicos} from '../services/app.service'
 import Modal from "../components/Modal/Modal";
 import {useWindowSize} from "@uidotdev/usehooks";
 
 export default function Home({}) {
-    const [listaMostrada, handleListaMostrada] = useState([])
+    const [listaMostrada,handleListaMostrada]=useState([])
 
     useEffect(() => {
-        const fetchMedicos = async () => {
+        const fetchMedicos=async () => {
             getMedicos()
                 .then(list => {
-                    handleListaMostrada(list.slice(0, 3))
+                    handleListaMostrada(list.slice(0,3))
                 })
                 .catch(error => {
-                    console.log('Error: ' + error)
+                    console.log('Error: '+error)
                 })
         }
         fetchMedicos()
-    }, [])
+    },[])
 
 
-    const size = useWindowSize()
+    const size=useWindowSize()
 
 
     return (<>
-        <CustomHead title={'Americas Oftalmocenter'}/>
+        <CustomHead title={'Americas Oftalmocenter'} />
 
         <Banner id={1}>
             <div className="container-fluid">
@@ -137,7 +137,7 @@ export default function Home({}) {
 
         <div className={styles.SectionTwoMobile}>
             <div className={styles.SectionTwo_boxTwo}>
-                <Button title={'Nossas Clínicas'} id={11}/>
+                <Button title={'Nossas Clínicas'} id={11} />
                 <h2>
                     A American Oftalmocenter conta com 5 unidades no Rio de Janeiro.
                 </h2>
@@ -145,17 +145,20 @@ export default function Home({}) {
                     Escolha uma de nossas clínicas oftalmológicas. Veja a mais próxima
                     de você!
                 </p>
+                <p className={styles.titleNossasClinicas}>Nossas clínicas: </p>
                 <div className="form-group">
                     <select
                         className="form-control-lg"
                         name="unidades"
                     >
-                        <option selected>Escolha sua clínica aqui</option>
-                        <option value="/">Unidade Barra da Tijuca</option>
-                        <option value="/">Unidade Barra da Tijuca</option>
-                        <option value="/">Unidade Barra da Tijuca</option>
-                        <option value="/">Unidade Barra da Tijuca</option>
-                        <option value="/">Unidade Barra da Tijuca</option>
+                        <option selected disabled>Escolha sua clínica aqui</option>
+                        <option value="/">Unidade Barra</option>
+                        <option value="/">Unidade Barra Kids</option>
+                        <option value="/">Unidade Botafogo</option>
+                        <option value="/">Unidade CC Tijuca (IOT)</option>
+                        <option value="/">Unidade Méier</option>
+                        <option value="/">Unidade Nova América</option>
+                        <option value="/">Unidade Tijuca</option>
                     </select>
                 </div>
             </div>
@@ -169,7 +172,7 @@ export default function Home({}) {
                 />
             </div>
             <div className="container d-flex justify-content-center pb-5 mb-5 mt-5">
-                <Button title={'Agendar consultar e exames'} id={10} to={'/'}/>
+                <Button title={'Agendar consultar e exames'} id={10} to={'/'} />
             </div>
         </div>
 
@@ -181,9 +184,9 @@ export default function Home({}) {
                     style={{background: ''}}
                 >
                     <div className="col-4" style={{cursor: 'pointer'}}
-                         onClick={() => console.log("clicou")}
-                         data-bs-toggle="modal"
-                         data-bs-target="#exampleModal"
+                        onClick={() => console.log("clicou")}
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
                     >
                         <Image
                             src={containerBackgroundDois}
@@ -194,9 +197,9 @@ export default function Home({}) {
                     </div>
                     <div className="col-8">
                         <div className={styles.SectionTwo_boxTwo}>
-                            <Button title={'Nossas Clínicas'} id={11}/>
+                            <Button title={'Nossas Clínicas'} id={11} />
                             <h2>
-                                A American Oftalmocenter conta com 5 unidades <br/>no Rio de
+                                A American Oftalmocenter conta com 5 unidades <br />no Rio de
                                 Janeiro.
                             </h2>
                             <p>
@@ -246,7 +249,7 @@ export default function Home({}) {
                                 </div>
                             </div>
                             <div className={styles.unidadesBtnDois}>
-                                <Button title={'Agendar consultas e exames'} id={12}/>
+                                <Button title={'Agendar consultas e exames'} id={12} />
                             </div>
                         </div>
                     </div>
@@ -301,7 +304,7 @@ export default function Home({}) {
 
         </div>
         <div className={styles.SectionFour}>
-            <Button title={'Nossas especialidades'} id={11}/>
+            <Button title={'Nossas especialidades'} id={11} />
             <Container
                 title={'A Americas Oftalmocenter conta com oftalmologistas especializados para iniciar seu tratamento'}
                 star
@@ -365,13 +368,13 @@ export default function Home({}) {
                 </div>
                 <div className={styles.SectionFourActionButton}>
                     <p>Entre em contato com a gente para agendar sua consulta.</p>
-                    <Button title={'Agendar consultas e exames'} id={1}/>
+                    <Button title={'Agendar consultas e exames'} id={1} />
                 </div>
             </Container>
         </div>
 
         <div className={styles.SectionFive}>
-            <Button title={'Nossos Médicos'} id={11}/>
+            <Button title={'Nossos Médicos'} id={11} />
             <Container
                 label={'Nossos médicos'}
                 content={'Nosso corpo clínico é composto por mais de 65 médicos oftalmologistas prontos para lhe atender em todas as áreas clínicas e cirúrgicas da oftalmologia. São profissionais comprometidos em prestar aos nossos pacientes o mais alto nível de qualidade e segurança.'}
@@ -380,11 +383,11 @@ export default function Home({}) {
             ></Container>
 
             <div className={'container d-flex justify-content-around mt-5 mb-5 flex-wrap'}>
-                {listaMostrada.map((medico, i) => {
-                    return <MedicoSingle medico={medico} key={i}/>
+                {listaMostrada.map((medico,i) => {
+                    return <MedicoSingle medico={medico} key={i} />
                 })}
             </div>
-            <Button title={'Conheça nossos oftalmologistas'} id={1}/>
+            <Button title={'Conheça nossos oftalmologistas'} id={1} />
         </div>
 
         <div className={styles.SectionSeven}>
@@ -395,13 +398,13 @@ export default function Home({}) {
                 <div className={'d-lg-flex d-md-flex flex-lg-row flex-sm-column'}>
 
                     <div className="col-lg-5 col-md-5 col-sm-12 p-0">
-                        <Image src={oftalmoPic}/>
+                        <Image src={oftalmoPic} />
                     </div>
                     <div className="col-lg-7 col-md-7  d-flex flex-column">
                         <div className={styles.oftalmoKids}>
-                            <Image src={oftalmoKids}/>
+                            <Image src={oftalmoKids} />
                         </div>
-                        <Button title={'Oftalmolofia infantil'} id={11}/>
+                        <Button title={'Oftalmolofia infantil'} id={11} />
                         <Container
                             label={'Oftalmologia Infantil'}
                             title={'Todas as nossas unidades contam com médicos oftalmologistas pediátricos para atender nossos pequenos pacientes.'}
@@ -409,7 +412,7 @@ export default function Home({}) {
                         ></Container>
                         <p
                             style={{
-                                textAlign: 'left', padding: '0.5rem 1rem', marginTop: '-1rem'
+                                textAlign: 'left',padding: '0.5rem 1rem',marginTop: '-1rem'
                             }}
                         >
                             Acesse o site da <b>Americas OftalmoKids</b> para saber mais.
@@ -432,9 +435,9 @@ export default function Home({}) {
                 <div>
                     <div className={styles.slideKids}>
                         <Swiper
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            modules={[Navigation,Pagination,Scrollbar,A11y]}
                             spaceBetween={15}
-                            slidesPerView={size.width >= '770' ? 5 : 1}
+                            slidesPerView={size.width>='770'? 5:1}
                             Autoplay={true}
                             HashNavigation={true}
                             grabCursor={true}
@@ -443,51 +446,51 @@ export default function Home({}) {
                             navigation
                         >
                             <SwiperSlide>
-                                <Image src={kids1}/>
+                                <Image src={kids1} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids2}/>
+                                <Image src={kids2} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids3}/>
+                                <Image src={kids3} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids4}/>
+                                <Image src={kids4} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids5}/>
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <Image src={kids1}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids2}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids3}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids4}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids5}/>
+                                <Image src={kids5} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <Image src={kids1}/>
+                                <Image src={kids1} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids2}/>
+                                <Image src={kids2} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids3}/>
+                                <Image src={kids3} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids4}/>
+                                <Image src={kids4} />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Image src={kids5}/>
+                                <Image src={kids5} />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <Image src={kids1} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids2} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids3} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids4} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids5} />
                             </SwiperSlide>
                         </Swiper>
                     </div>
@@ -495,36 +498,36 @@ export default function Home({}) {
             </div>
         </div>
 
-        <Depoimentos/>
+        <Depoimentos />
 
-        <PlanosConvenios/>
+        <PlanosConvenios />
 
         <div className={styles.SectionEleven}>
             <div className="container">
                 <div>
                     <div className="col-md-12">
-                        <Button title={'Aprenda mais'} id={11}/>
+                        <Button title={'Aprenda mais'} id={11} />
                         <Container
                             label={'Aprenda mais'}
                             title={'Nossos artigos publicados'}
                             content={' '}
                         />
                         <div className={styles.postsBlog}>
-                            <Merda/>
+                            <Merda />
                         </div>
-                        <Button title={'Todos nossos artigos'} id={1}/>
+                        <Button title={'Todos nossos artigos'} id={1} />
                     </div>
                 </div>
             </div>
         </div>
 
-        <Faq id={1}/>
+        <Faq id={1} />
 
-        <FormAtendimento/>
+        <FormAtendimento />
         <Modal body={<iframe width="100%" height="300" src="https://www.youtube.com/embed/S4plMxPsShA"
-                             title="Ceratocone - Dra. Evelyn Ciuffo" frameBorder="0"
-                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                             allowFullScreen></iframe>}/>
+            title="Ceratocone - Dra. Evelyn Ciuffo" frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen></iframe>} />
 
     </>)
 }

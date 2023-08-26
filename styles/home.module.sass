@@ -442,20 +442,18 @@
         color: #FFFFFF
 
       button
-        &:nth-last-of-type(1)
+        &::nth-last-of-type(1)
           margin: 10px 0
 
 @media screen and (max-width: 767px)
 
   .Contact
-    display: grid !important
-    gap: 15px
+    display: flex
+    flex-direction: column
 
     .ContactItem
-      flex-direction: initial !important
-      justify-content: normal
-      gap: 25px
-
+      flex-direction: row !important
+      justify-content: space-between !important
       p
         font-size: 12px !important
 
@@ -606,3 +604,11 @@
       margin-top: 10px
       color: #fff
       column-gap: 8px
+
+.titleNossasClinicas
+  color: #003057
+  font-family: 'Poppins', sans-serif
+  font-size: 16px
+  font-style: normal
+  font-weight: 400
+  line-height: normal
