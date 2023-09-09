@@ -150,15 +150,17 @@ export default function Home({}) {
                     <select
                         className="form-control-lg"
                         name="unidades"
+                        onChange={() => window.location.href='/unidades'}
                     >
                         <option selected disabled>Escolha sua clínica aqui</option>
-                        <option value="/">Unidade Barra</option>
-                        <option value="/">Unidade Barra Kids</option>
-                        <option value="/">Unidade Botafogo</option>
-                        <option value="/">Unidade CC Tijuca (IOT)</option>
-                        <option value="/">Unidade Méier</option>
-                        <option value="/">Unidade Nova América</option>
-                        <option value="/">Unidade Tijuca</option>
+
+                        <option><Button to={'/unidades'} title="Unidade Barra "></Button></option>
+                        <option><Button to={'/unidades'} title=" Unidade Barra Kids "></Button></option>
+                        <option><Button to={'/unidades'} title="Unidade Botafogo "></Button></option>
+                        <option><Button to={'/unidades'} title="Unidade CC Tijuca (IOT)"></Button></option>
+                        <option><Button to={'/unidades'} title="Unidade Méier "></Button></option>
+                        <option><Button to={'/unidades'} title="Unidade Nova América "></Button></option>
+                        <option><Button to={'/unidades'} title="Unidade Tijuca "></Button></option>
                     </select>
                 </div>
             </div>

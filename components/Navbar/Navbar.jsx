@@ -212,9 +212,18 @@ export default function Navbar({footer}) {
                                 aria-label="Close"
                             ></button>
                         </div>
-                        <div className={`offcanvas-body ${styles.navMobileBody}`}>
+                        <div className={`offcanvas-body ${styles.navMobileBody}`} onClick={
+                            () => {
+                                document.querySelector('.offcanvas').classList.remove('show')
+                                document.querySelector('.offcanvas-backdrop').classList.remove('show')
+                                document.querySelector('body').style.overflow='auto'
+                                document.querySelector('body').style.paddingRight='0'
+                            }
+
+                        }>
                             {navigation.map(item => (
-                                <Link href={item.href} key={item.name}>
+                                <Link href={item.href} key={item}
+                                >
                                     <a
                                         className={classNames(
                                             'inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium',
