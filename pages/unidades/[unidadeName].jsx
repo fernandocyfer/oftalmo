@@ -5,13 +5,13 @@ import simgleVideo from '/public/images/singleUnidadeVideo.svg'
 import Breadcrumb from '../../components/BreadCrumb/Breadcrum'
 import UnidadeInfo from '../../components/UnidadeInfo/UnidadeInfo'
 import axios from 'axios'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
-const UnidadeName = ({ data }) => {
-  const router = useRouter()
-  const idDocRender = router.asPath.split('/')[2]
-  const docList = data?.filter(un => un.id === idDocRender)
-  const docSelected = docList[0]
+const UnidadeName=({data}) => {
+  const router=useRouter()
+  const idDocRender=router.asPath.split('/')[2]
+  const docList=data?.filter(un => un.id===idDocRender)
+  const docSelected=docList[0]
 
   console.log(docSelected)
 
@@ -20,7 +20,7 @@ const UnidadeName = ({ data }) => {
       <Banner id={6}>
         <div className={'container-md d-flex flex-column'}>
           <div className={styles.unidadeSingle}>
-            <h2>Oftalmologistas na {docSelected.name}</h2>
+            <h1>Oftalmologistas na {docSelected.name}</h1>
             <p>
               Nossa Clínica Oftalmológica na Barra da Tijuca tem como propósito
               atender seus pacientes de maneira qualificada, com alta tecnologia
@@ -34,8 +34,8 @@ const UnidadeName = ({ data }) => {
         </div>
       </Banner>
       <Breadcrumb
-        to={'unidades/' + docSelected.name}
-        title={'Unidades / ' + docSelected.name}
+        to={'unidades/'+docSelected.name}
+        title={'Unidades / '+docSelected.name}
       />
 
       <UnidadeInfo unidade={docSelected} />
@@ -46,16 +46,16 @@ const UnidadeName = ({ data }) => {
 export default UnidadeName
 
 export async function getServerSideProps() {
-  const API_KEY = process.env.API_TOKEN
-  const API_URL = process.env.BASE_URL
-  const dataToSend = {
+  const API_KEY=process.env.API_TOKEN
+  const API_URL=process.env.BASE_URL
+  const dataToSend={
     token: API_KEY
   }
 
-  const response = await axios.get(`${API_URL}/unidade`, {
+  const response=await axios.get(`${API_URL}/unidade`,{
     data: dataToSend
   })
-  const data = response.data
+  const data=response.data
 
   return {
     props: {

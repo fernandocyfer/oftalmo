@@ -13,7 +13,7 @@ const medicoConsulta=({medico}) => {
                     <MedicoSingle medico={medico} />
                     <div className={styles.boxCall}>
                         <div className={'d-flex flex-column justify-content-between h-100'}>
-                            <Button id={1} title={'Marcar Consulta'} />
+                            <Button id={1} title={'Marcar Consulta'} to={'https://web.whatsapp.com/send?phone=552124961161&text='} />
                             <Image src={line} width={172} height={2} />
                             <p>
                                 {medico?.listaCalendar.map((un,index) =>

@@ -18,16 +18,8 @@ export default function Navbar({footer}) {
         {
             name: 'O Grupo',
             href: '/ogrupo',
-            subRoutes: [
-                {
-                    name: 'O Grupo',
-                    href: '/ogrupo'
-                },
-                {
-                    name: 'Oftalmokids',
-                    href: '/oftalmokids'
-                }
-            ]
+
+
         },
         {
             name: 'Equipe Médica',
@@ -53,6 +45,7 @@ export default function Navbar({footer}) {
                 }
             ]
         },
+
         {
             name: 'Aprenda mais',
             href: '/',
@@ -62,7 +55,11 @@ export default function Navbar({footer}) {
                     href: 'https://wordpress-576870-3751630.cloudwaysapps.com/'
                 }
             ]
-        }
+        },
+        {
+            name: 'Oftalmokids',
+            href: '/oftalmokids'
+        },
     ]
 
     const router=useRouter()
