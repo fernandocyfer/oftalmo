@@ -53,6 +53,11 @@ export default function Navbar({footer}) {
                 {
                     name: 'Blog',
                     href: 'https://wordpress-576870-3751630.cloudwaysapps.com/'
+                },
+                {
+                    name: 'Materiais Gratuitos',
+                    href: 'https://wordpress-576870-3751630.cloudwaysapps.com/materiais-gratuitos/'
+
                 }
             ]
         },

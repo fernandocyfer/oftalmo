@@ -7,8 +7,18 @@ import FormAtendimento from '../components/FormAtendimento/FormAtendimento'
 import Breadcrum from "../components/BreadCrumb/Breadcrum";
 import Container from "../components/Container/Container";
 import SingleContainer from "../components/SingleContainer/SingleContainer";
+import Head from 'next/head'
 
 const ogrupo=() => (<>
+
+    <Head>
+        <title>O Grupo Americas Oftalmocenter</title>
+        <meta name="title" content="O Grupo Americas Oftalmocenter" />
+        <meta name="description" content=" O Grupo Americas Oftalmocenter conta com 5 clínicas oftalmológicas no Rio de Janeiro. Nossa estrutura foi pensada para atender pacientes com praticidade e excelência no atendimento. Nosso corpo clínico altamente especializado conta com mais de 80 oftalmologistas, preparados para prestar atendimento de excelência em todas as áreas da oftalmologia." />
+        <link rel="canonical" href='' />
+        <meta name='robots' content='index, follow' />
+    </Head>
+
     <Banner id={11}>
         <SingleContainer
             title={'O Grupo'}
