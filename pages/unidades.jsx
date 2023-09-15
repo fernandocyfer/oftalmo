@@ -4,10 +4,12 @@ import Container from '../components/Container/Container'
 import {Accordion} from 'react-bootstrap'
 import Image from 'next/image'
 import unidadeIcon from '../public/icons/unidadesIcon.svg'
-import unidadeBarra from '../public/images/UnidadeBarradaTijuca.svg'
-import unidadeTijuca from '../public/images/UnidadeTijuca.svg'
-import unidadeBotafogoSul from '../public/images/UnidadeBotafogoSul.svg'
-import unidadeMeier from '../public/images/UnidadeMeier.svg'
+
+import unidadeBarra from '../public/unidades/Barra.png'
+import unidadeTijuca from '../public/unidades/Tijuca.png'
+import unidadeBotafogoSul from '../public/unidades/Botafogo.png'
+import unidadeMeier from '../public/unidades/Meier.png'
+
 import amilLogo from '../public/logo/convenios/amil-logo.svg'
 import bradescoLogo from '../public/logo/convenios/bradesco-logo.svg'
 import sulamericaLogo from '../public/logo/convenios/sulamerica-logo.svg'
@@ -43,18 +45,20 @@ import realgrandezaLogo from '../public/logo/convenios/realgrandeza-logo.svg'
 import sompoLogo from '../public/logo/convenios/sompo-logo.svg'
 import tempoLogo from '../public/logo/convenios/tempo-logo.svg'
 import axios from 'axios'
-import {useEffect, useState} from 'react'
+import {useEffect,useState} from 'react'
 import Faq from "../components/Faq/faq";
 import Banner from "../components/Banner/Banner";
+import ImageError from '../public/banner/error404.webp'
 import SingleContainer from "../components/SingleContainer/SingleContainer";
 
 export default function Unidades({data}) {
-    const [listUnidades, setListUnidades] = useState([])
+
+    const [listUnidades,setListUnidades]=useState([])
 
     useEffect(() => {
-        data ? setListUnidades(data) : null
+        data? setListUnidades(data):null
         console.log(listUnidades)
-    }, [])
+    },[])
 
     return (
         <>
@@ -65,8 +69,8 @@ export default function Unidades({data}) {
                 >
                     <div className={'d-flex justify-content-center pt-3'}>
                         <Button title={'Agendar consulta'} id={10}
-                                to={'https://web.whatsapp.com/send?phone=552124961161&text='}/>
-                        <Button title={'Emergência Oftalmológica'} id={6} to={'/'}/>
+                            to={'https://web.whatsapp.com/send?phone=552124961161&text='} />
+                        <Button title={'Emergência Oftalmológica'} id={6} to={'/'} />
                     </div>
                 </SingleContainer>
             </Banner>
@@ -87,24 +91,39 @@ export default function Unidades({data}) {
             <div className={styles.unidadesContainer}>
                 <div className="container">
                     <div className="row">
-                        {listUnidades.map(un => {
+                        {listUnidades.filter((un) => !['542f3a34-edb7-46c0-a932-144a8d5599c4','7523871b-61a9-401d-b37c-ffe5a933e80f'].includes(un.id)).map(un => {
                             return (
                                 <div className="col-md-4">
                                     <div className={styles.boxUnidade}>
                                         <div className={styles.boxUm}>
                                             <div className={styles.icon}>
-                                                <Image src={unidadeIcon}/>
+                                                <Image src={unidadeIcon} />
                                             </div>
                                             <div className={styles.textos}>
                                                 <h4>Unidade {un.name}</h4>
+                                                {
+                                                    un.name=='Barra'? <p style={{fontWeight: 'bold'}}>Shopping Città América</p>:
+                                                        un.name=='Tijuca'? <p style={{fontWeight: 'bold'}}> Hospital São Francisco</p>:
+                                                            un.name=='Botafogo'? <p style={{fontWeight: 'bold'}}>Rua Martins Ferreira, nº 65.</p>:
+                                                                un.name=='Méier'? <p style={{fontWeight: 'bold'}}>Rua Lucídio Lago, 210 (em frente ao batalhão)</p>:
+                                                                    un.name=='Nova América'? <p style={{fontWeight: 'bold'}}>Shopping Nova América</p>:
+                                                                        null
+                                                }
                                             </div>
                                         </div>
                                         <div className={styles.boxDois}>
-                                            <Image src={unidadeBarra}/>
+                                            {
+                                                un.name=='Barra'? <Image src={unidadeBarra} />:
+                                                    un.name=='Tijuca'? <Image src={unidadeTijuca} />:
+                                                        un.name=='Botafogo'? <Image src={unidadeBotafogoSul} />:
+                                                            un.name=='Méier'? <Image src={unidadeMeier} />:
+                                                                un.name=='Nova América'? <Image src={unidadeMeier} />:
+                                                                    <Image src={ImageError} />
+                                            }
                                             <Button
                                                 title={'Conheça esta unidade'}
                                                 id={1}
-                                                to={'/unidades/' + un.id}
+                                                to={'/unidades/'+un.id}
                                             />
                                         </div>
                                     </div>
@@ -117,7 +136,7 @@ export default function Unidades({data}) {
 
             <div className="container">
                 <div className={styles.SectionFour}>
-                    <Button title={'PLANOS E CONVÊNIOS'} id={1}/>
+                    <Button title={'PLANOS E CONVÊNIOS'} id={1} />
                     <Container
                         title={
                             'A Americas Oftalmocenter conta com oftalmologistas especializados para iniciar seu tratamento'
@@ -129,19 +148,19 @@ export default function Unidades({data}) {
                         idLabel={3}
                     ></Container>
                     <div className={styles.principaisConvenios}>
-                        <Image src={amilLogo}/>
-                        <Image src={bradescoLogo}/>
-                        <Image src={sulamericaLogo}/>
-                        <Image src={saudeassimLogo}/>
+                        <Image src={amilLogo} />
+                        <Image src={bradescoLogo} />
+                        <Image src={sulamericaLogo} />
+                        <Image src={saudeassimLogo} />
                     </div>
                     <div
                         className={styles.principaisConvenios}
                         style={{marginTop: '32px'}}
                     >
-                        <Image src={petrobrasLogo}/>
-                        <Image src={caixaLogo}/>
-                        <Image src={cassiLogo}/>
-                        <Image src={goldencrossLogo}/>
+                        <Image src={petrobrasLogo} />
+                        <Image src={caixaLogo} />
+                        <Image src={cassiLogo} />
+                        <Image src={goldencrossLogo} />
                     </div>
                 </div>
             </div>
@@ -149,59 +168,59 @@ export default function Unidades({data}) {
             <div className="container">
                 <div className="col-12">
                     <div className={styles.secundariosConvenios}>
-                        <Image src={allianzLogo}/>
-                        <Image src={amafrerjLogo}/>
-                        <Image src={ambepLogo}/>
-                        <Image src={camprjLogo}/>
-                        <Image src={correiosLogo}/>
+                        <Image src={allianzLogo} />
+                        <Image src={amafrerjLogo} />
+                        <Image src={ambepLogo} />
+                        <Image src={camprjLogo} />
+                        <Image src={correiosLogo} />
                     </div>
                     <div className={styles.secundariosConvenios}>
-                        <Image src={eletrossaudeLogo}/>
-                        <Image src={embrapaLogo}/>
-                        <Image src={fiosaudeLogo}/>
-                        <Image src={gamaLogo}/>
-                        <Image src={notredameLogo}/>
+                        <Image src={eletrossaudeLogo} />
+                        <Image src={embrapaLogo} />
+                        <Image src={fiosaudeLogo} />
+                        <Image src={gamaLogo} />
+                        <Image src={notredameLogo} />
                     </div>
                     <div className={styles.secundariosConvenios}>
-                        <Image src={lifeLogo}/>
-                        <Image src={marinhaLogo}/>
-                        <Image src={mediServiceLogo}/>
-                        <Image src={mutuaLogo}/>
-                        <Image src={omintLogo}/>
+                        <Image src={lifeLogo} />
+                        <Image src={marinhaLogo} />
+                        <Image src={mediServiceLogo} />
+                        <Image src={mutuaLogo} />
+                        <Image src={omintLogo} />
                     </div>
                     <div className={styles.secundariosConvenios}>
-                        <Image src={pameLogo}/>
-                        <Image src={pasa2Logo}/>
-                        <Image src={petrodistLogo}/>
-                        <Image src={postalsaudeLogo}/>
-                        <Image src={realgrandezaLogo}/>
+                        <Image src={pameLogo} />
+                        <Image src={pasa2Logo} />
+                        <Image src={petrodistLogo} />
+                        <Image src={postalsaudeLogo} />
+                        <Image src={realgrandezaLogo} />
                     </div>
                     <div className={styles.secundariosConvenios}>
-                        <Image src={sompoLogo}/>
-                        <Image src={tempoLogo}/>
-                        <Image src={saudeLogo}/>
-                        <Image src={unimedLogo}/>
-                        <Image src={valeLogo}/>
+                        <Image src={sompoLogo} />
+                        <Image src={tempoLogo} />
+                        <Image src={saudeLogo} />
+                        <Image src={unimedLogo} />
+                        <Image src={valeLogo} />
                     </div>
                 </div>
             </div>
 
-            <Faq id={5}/>
+            <Faq id={5} />
         </>
     )
 }
 
 export async function getServerSideProps() {
-    const API_KEY = process.env.API_TOKEN
-    const API_URL = process.env.BASE_URL
-    const dataToSend = {
+    const API_KEY=process.env.API_TOKEN
+    const API_URL=process.env.BASE_URL
+    const dataToSend={
         token: API_KEY
     }
 
-    const response = await axios.get(`${API_URL}/unidade`, {
+    const response=await axios.get(`${API_URL}/unidade`,{
         data: dataToSend
     })
-    const data = response.data
+    const data=response.data
 
     return {
         props: {
