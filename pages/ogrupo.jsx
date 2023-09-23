@@ -8,6 +8,16 @@ import Breadcrum from "../components/BreadCrumb/Breadcrum";
 import Container from "../components/Container/Container";
 import SingleContainer from "../components/SingleContainer/SingleContainer";
 import Head from 'next/head'
+import Statistic from '../components/Statistic/Statistic'
+
+import estetoIcon from '../public/icons/esteto-icon.svg'
+import eyeStatisticIcon from '../public/icons/eye-statistic.svg'
+import estetoFormIcon from '../public/icons/estetoFormIcon.svg'
+import unidades from '../public/icons/hospital.png'
+import cc from '../public/icons/surgery-room.png'
+import conv from '../public/icons/health-insurance.png'
+import exams from '../public/icons/exams.png'
+import surgery from '../public/icons/eye.png'
 
 const ogrupo=() => (<>
 
@@ -46,29 +56,61 @@ const ogrupo=() => (<>
                     content={' '}
                     dark={true}
                 />
-                <div
-                    className="col-12 d-flex flex-column"
-                    style={{padding: '2rem 0'}}
-                >
-                    <div className="col-12">
-                        <div className={styles.Contact}>
-                            <div className={'justify-content-center align-items-center'}>
-                                <ul style={{width: '100%',margin: '0 auto',textAlign: 'left'}}>
-                                    <li><h5>Mais de 500 mil pacientes atendidos.</h5></li>
-                                    <li><h5>Mais de 80 médicos qualificados.</h5></li>
-                                    <li><h5>Mais de 800 mil atendimentos realizados.</h5></li>
-                                    <li><h5>5 unidades de atendimento.</h5></li>
-                                    <li><h5> Centro cirúrgico próprio.</h5></li>
-                                    <li><h5>Aceitamos mais de 35 convênios.</h5></li>
-                                    <li><h5>Oferecemos 37 tipos de exames.</h5></li>
-                                    <li><h5>Realizamos 18 tipos de cirurgia.</h5></li>
-                                </ul>
-                            </div>
-                        </div>
+                <br />
+                <br />
+                <div className="col-12 ">
+                    <div className="d-flex justify-content-center flex-wrap">
+
+                        <Statistic
+                            image={estetoFormIcon}
+                            title={'+500 mil'}
+                            subtitle={'pacientes atendidos.'}
+                        />
+                        <Statistic
+                            image={estetoIcon}
+                            title={'+80'}
+                            subtitle={'médicos qualificados.'}
+                        />
+                        <Statistic
+                            title={'+800 mil'}
+                            image={eyeStatisticIcon}
+                            subtitle={'Atendimentos realizados.'}
+                        />
+                        <Statistic
+                            title={'5'}
+                            image={unidades}
+                            subtitle={'Unidades de atendimento.'}
+                        />
                     </div>
+                    <br />
+                    <br />
+                    <div className="d-flex justify-content-center flex-wrap">
+                        <Statistic
+                            image={cc}
+                            title={' '}
+                            subtitle={'Centro cirúrgico próprio.'}
+                        />
+                        <Statistic
+                            image={conv}
+                            title={'+35'}
+                            subtitle={'Aceitamos mais de 35 convênios.'}
+                        />
+                        <Statistic
+                            title={'+37'}
+                            image={exams}
+                            subtitle={'Tipos de exames.'}
+                        />
+                        <Statistic
+                            title={'+18'}
+                            image={surgery}
+                            subtitle={'Tipos de cirurgias.'}
+                        />
+                    </div>
+
+                    <ul style={{width: '100%',margin: '0 auto',textAlign: 'left'}}>
+                    </ul>
                 </div>
             </div>
-
         </div>
     </div>
     <div className={'p-5'}>
