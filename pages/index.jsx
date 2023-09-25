@@ -137,13 +137,13 @@ export default function Home({}) {
                     >
                         <option selected disabled>Escolha sua clínica aqui</option>
 
-                        <option><Button to={'/unidades'} title="Unidade Barra "></Button></option>
+                        <option><Button to={'/unidades/9d14fe9c-e8d4-42c2-9895-a76b85993f5f'} title="Unidade Barra "></Button></option>
                         <option><Button to={'/unidades'} title=" Unidade Barra Kids "></Button></option>
-                        <option><Button to={'/unidades'} title="Unidade Botafogo "></Button></option>
+                        <option><Button to={'/unidades/fcbbaa9c-9c3a-454f-8f96-d26ad85f8d4c'} title="Unidade Botafogo "></Button></option>
                         <option><Button to={'/unidades'} title="Unidade CC Tijuca (IOT)"></Button></option>
-                        <option><Button to={'/unidades'} title="Unidade Méier "></Button></option>
-                        <option><Button to={'/unidades'} title="Unidade Nova América "></Button></option>
-                        <option><Button to={'/unidades'} title="Unidade Tijuca "></Button></option>
+                        <option><Button to={'/unidades/458b2bcc-7066-4d11-8dd2-66e332faebca'} title="Unidade Méier "></Button></option>
+                        <option><Button to={'/unidades/88d4fe11-287c-48ff-a231-eaf27fe4fe02'} title="Unidade Nova América "></Button></option>
+                        <option><Button to={'/unidades/48462d41-8031-4b6c-a13e-963bc9fde471'} title="Unidade Tijuca "></Button></option>
                     </select>
                 </div>
             </div>
@@ -195,7 +195,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Barra da Tijuca'}
-                                        to={'/unidades'}
+                                        to={'/unidades/9d14fe9c-e8d4-42c2-9895-a76b85993f5f'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -211,7 +211,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={' Unidade Bota fogo Zona Sul'}
-                                        to={'/unidades'}
+                                        to={'/unidades/fcbbaa9c-9c3a-454f-8f96-d26ad85f8d4c'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -219,7 +219,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Méier'}
-                                        to={'/unidades'}
+                                        to={'/unidades/458b2bcc-7066-4d11-8dd2-66e332faebca'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -227,7 +227,7 @@ export default function Home({}) {
                                 <div>
                                     <Button
                                         title={'Unidade Tijuca'}
-                                        to={'/unidades'}
+                                        to={'/unidades/48462d41-8031-4b6c-a13e-963bc9fde471'}
                                         id={4}
                                         icon={locationIcon}
                                     />
@@ -353,7 +353,7 @@ export default function Home({}) {
                 </div>
                 <div className={styles.SectionFourActionButton}>
                     <p>Entre em contato com a gente para agendar sua consulta.</p>
-                    <Button title={'Agendar consultas e exames'} id={1} />
+                    <Button to={'https://web.whatsapp.com/send?phone=552124961161&text='} title={'Agendar consultas e exames'} id={1} />
                 </div>
             </Container>
         </div>
@@ -372,7 +372,7 @@ export default function Home({}) {
                     return <MedicoSingle medico={medico} key={i} />
                 })}
             </div>
-            <Button title={'Conheça nossos oftalmologistas'} id={1} />
+            <Button to={'/equipe'} title={'Conheça nossos oftalmologistas'} id={1} />
         </div>
 
         <div className={styles.SectionSeven}>

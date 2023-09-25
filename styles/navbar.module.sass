@@ -42,14 +42,18 @@
 .mobileMenu
   display: none
 @media screen and (max-width: 1450px)
+
+  .navbar
+    column-gap: 0 !important
+    padding: 24px 10px
+    button
+      padding: 10px
+      font-size: 1rem
+      width: 150px
   .navlist
     a
       li
         width: max-content
-
-@media screen and (max-width: 1360px)
-  .navlist
-    column-gap: 0
 
 @media screen and (max-width: 1060px)
   .navlist

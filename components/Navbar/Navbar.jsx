@@ -171,13 +171,13 @@ export default function Navbar({footer}) {
                     </nav>
                 </div>
 
-                <div className="gap-3 navMobileAg">
+                <div className="navMobileAg">
                     <Button title={'AGENDE AGORA'} id={1} to={'https://web.whatsapp.com/send?phone=552124961161&text='}
                     />
                 </div>
 
                 <div className={styles.mobileMenu}>
-                    <div className="d-flex gap-3 navMobileEmergency">
+                    <div className="d-flex  navMobileEmergency">
                         <Image width={45} height={45} src={btnEmergency} to={'/'} />
                     </div>
                     <button
