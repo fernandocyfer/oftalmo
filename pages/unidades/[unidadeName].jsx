@@ -46,7 +46,7 @@ export default UnidadeName
 
 export async function getServerSideProps() {
 
-  const data={}
+  let data={}
   const API_KEY=process.env.API_TOKEN
   const API_URL=process.env.BASE_URL
   const dataToSend={
