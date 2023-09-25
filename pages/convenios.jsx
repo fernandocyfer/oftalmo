@@ -50,24 +50,110 @@ import Breadcrum from '../components/BreadCrumb/Breadcrum'
 import Search from '../components/Search/Search'
 import CardConvResult from '../components/Cards/CardConvResult'
 import Faq from "../components/Faq/faq";
+import {getConvenios} from '../services/convenios.service'
+import {useState} from 'react'
+import {useEffect} from 'react'
+import {Swiper,SwiperSlide} from 'swiper/react'
+import {Navigation,Pagination,Scrollbar,A11y} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+
+// Import Swiper styles
+import 'swiper/css'
+import {useWindowSize} from "@uidotdev/usehooks";
 
 export default function Convenios() {
+
+    const size=useWindowSize()
+
+    const listOneBk=[
+        {
+            id: 1,
+            name: "Amil",
+        },
+        {
+            id: 2,
+            name: "Bradesco",
+        },
+        {
+            id: 3,
+            name: "Amil",
+        },
+        {
+            id: 2,
+            name: "Bradesco",
+        },
+        {
+            id: 3,
+            name: "Amil",
+        },
+        {
+            id: 2,
+            name: "Bradesco",
+        }
+    ]
+
+    const [listaMostrada,handleListaMostrada]=useState(listOneBk)
+
+    useEffect(() => {
+        const fetchMedicos=async () => {
+            getConvenios()
+                .then(list => {
+                    handleListaMostrada(list.slice(0,3))
+                })
+                .catch(error => {
+                    console.log('Error: '+error)
+                })
+        }
+        fetchMedicos()
+    },[])
+
+
+
+    const filter=(val) => {
+        handleListaMostrada(listaMostrada.filter((esp) => {
+            if(esp.name.toLocaleLowerCase().includes(val)) {
+                return esp
+            }
+        }
+        ))
+    }
+
+
     return (<>
         <Banner id={4}>
             <SingleContainer
                 title={'Atendimento Oftalmológico por Planos de Saúde e Convênios'}
                 description={'Oferecemos atendimentos oftalmológicos de qualidade para pacientes particulares e com convênios. Nossos médicos oftalmologistas atendem uma ampla variedade de convênios e planos de saúde no Rio de Janeiro, para garantir que nossos serviços sejam acessíveis para o maior número possível de pacientes.'}
             >
-                <Button title={'Agendar consulta'} id={1}/>
-                <Button title={'Emergência Oftalmológica'} id={6}/>
+                <Button title={'Agendar consulta'} id={1} />
+                <Button title={'Emergência Oftalmológica'} id={6} />
             </SingleContainer>
         </Banner>
+        <Breadcrum title={' Convênios'} />
+        <Search id={3} handleChange={filter}>
 
-        <Breadcrum title={' Convênios'}/>
+            <Swiper
+                modules={[Navigation,Pagination,Scrollbar,A11y]}
+                spaceBetween={0}
+                slidesPerView={size.width>='770'? 2:1}
+                Autoplay={true}
+                HashNavigation={true}
+                grabCursor={true}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={swiper => console.log(swiper)}
+                navigation
+            >
+                {
+                    listaMostrada.map((convenio,i) => <SwiperSlide>
+                        <CardConvResult key={i} name={convenio.name} />  </SwiperSlide>)
+                }
 
-        <Search id={1}>
-            <CardConvResult/>
-            <CardConvResult/>
+
+            </Swiper>
+
         </Search>
 
         <div className="container">
@@ -75,14 +161,14 @@ export default function Convenios() {
                 <div className={styles.principaisBox}>
                     <h2>Nossos convênios</h2>
                     <div className={styles.principaisConvenios}>
-                        <Image width={210} height={210} src={amilLogo}/>
-                        <Image width={210} height={210} src={bradescoLogo}/>
-                        <Image width={210} height={210} src={sulamericaLogo}/>
-                        <Image width={210} height={210} src={saudeassimLogo}/>
-                        <Image width={210} height={210} src={petrobrasLogo}/>
-                        <Image width={210} height={210} src={caixaLogo}/>
-                        <Image width={210} height={210} src={cassiLogo}/>
-                        <Image width={210} height={210} src={goldencrossLogo}/>
+                        <Image width={210} height={210} src={amilLogo} />
+                        <Image width={210} height={210} src={bradescoLogo} />
+                        <Image width={210} height={210} src={sulamericaLogo} />
+                        <Image width={210} height={210} src={saudeassimLogo} />
+                        <Image width={210} height={210} src={petrobrasLogo} />
+                        <Image width={210} height={210} src={caixaLogo} />
+                        <Image width={210} height={210} src={cassiLogo} />
+                        <Image width={210} height={210} src={goldencrossLogo} />
                     </div>
                 </div>
             </div>
@@ -91,44 +177,44 @@ export default function Convenios() {
         <div className="container">
             <div className="col-12">
                 <div className={styles.secundariosConvenios}>
-                    <Image src={allianzLogo}/>
-                    <Image src={amafrerjLogo}/>
-                    <Image src={ambepLogo}/>
-                    <Image src={camprjLogo}/>
-                    <Image src={correiosLogo}/>
+                    <Image src={allianzLogo} />
+                    <Image src={amafrerjLogo} />
+                    <Image src={ambepLogo} />
+                    <Image src={camprjLogo} />
+                    <Image src={correiosLogo} />
                 </div>
                 <div className={styles.secundariosConvenios}>
-                    <Image src={eletrossaudeLogo}/>
-                    <Image src={embrapaLogo}/>
-                    <Image src={fiosaudeLogo}/>
-                    <Image src={gamaLogo}/>
-                    <Image src={notredameLogo}/>
+                    <Image src={eletrossaudeLogo} />
+                    <Image src={embrapaLogo} />
+                    <Image src={fiosaudeLogo} />
+                    <Image src={gamaLogo} />
+                    <Image src={notredameLogo} />
                 </div>
                 <div className={styles.secundariosConvenios}>
-                    <Image src={lifeLogo}/>
-                    <Image src={marinhaLogo}/>
-                    <Image src={mediServiceLogo}/>
-                    <Image src={mutuaLogo}/>
-                    <Image src={omintLogo}/>
+                    <Image src={lifeLogo} />
+                    <Image src={marinhaLogo} />
+                    <Image src={mediServiceLogo} />
+                    <Image src={mutuaLogo} />
+                    <Image src={omintLogo} />
                 </div>
                 <div className={styles.secundariosConvenios}>
-                    <Image src={pameLogo}/>
-                    <Image src={pasaLogo}/>
-                    <Image src={petrobrasLogo}/>
-                    <Image src={postalsaudeLogo}/>
-                    <Image src={realgrandezaLogo}/>
+                    <Image src={pameLogo} />
+                    <Image src={pasaLogo} />
+                    <Image src={petrobrasLogo} />
+                    <Image src={postalsaudeLogo} />
+                    <Image src={realgrandezaLogo} />
                 </div>
 
                 <div className={styles.secundariosConvenios}>
-                    <Image src={sompoLogo}/>
-                    <Image src={tempoLogo}/>
-                    <Image src={unafiscoLogo}/>
-                    <Image src={unimedLogo}/>
-                    <Image src={valeLogo}/>
+                    <Image src={sompoLogo} />
+                    <Image src={tempoLogo} />
+                    <Image src={unafiscoLogo} />
+                    <Image src={unimedLogo} />
+                    <Image src={valeLogo} />
                 </div>
             </div>
         </div>
 
-        <Faq id={4}/>
+        <Faq id={4} />
     </>)
 }

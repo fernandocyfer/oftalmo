@@ -15,18 +15,26 @@ const Search=({children,id,options,handleSelect,search,handleChange}) => {
         handleChange(e)
     }
 
-
     return (<>
         <div className={style.search}>
             <div className={'container-xl p-4'}>
                 <div>
                     <p>Utilize o campo abaixo para encontrar a sua especialidade.</p>
                     <div className={style.searchInput}>
-                        <input
-                            type="text"
-                            placeholder={'Procure seu médico pelo nome'}
-                            onChange={(e) => handleChange(e.target.value)}
-                        />
+                        {
+                            id===3? (<>
+                                <input
+                                    type="text"
+                                    placeholder={'Procure por seu convênio'}
+                                    onChange={(e) => handleChange(e.target.value)}
+                                /></>):(
+                                <input
+                                    type="text"
+                                    placeholder={'Procure seu médico pelo nome'}
+                                    onChange={(e) => handleChange(e.target.value)}
+                                />
+                            )
+                        }
                         {id===2? (<>
                             <select onChange={(e) => getValue(e)} name="pets" id="pet-select">
                                 <option value="">Procure seu médico por especialidade</option>

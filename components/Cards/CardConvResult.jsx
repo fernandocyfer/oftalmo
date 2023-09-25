@@ -2,13 +2,13 @@ import styles from '/styles/cardConvenio.module.sass'
 import convDefault from '/public/logo/convResult.svg'
 import Image from 'next/image'
 
-const CardConvResult = ({ scr = convDefault }) => (
+const CardConvResult=({scr,name,id}) => (
   <div className={styles.cardConvResult}>
     <div className={styles.boxDesc}>
-      <h4>Amil</h4>
+      <h4>{name}</h4>
       <p>
         Possuímos uma equipe de médicos preparada para atender pacientes do
-        plano AMAFRERJ.
+        plano {name}.
       </p>
     </div>
 
@@ -29,7 +29,7 @@ const CardConvResult = ({ scr = convDefault }) => (
     <div className={styles.boxLogo}>
       <span>CONVÊNIOS</span>
       <div className={styles.logo}>
-        <Image src={scr} />
+        <Image src={scr??''} />
       </div>
     </div>
   </div>

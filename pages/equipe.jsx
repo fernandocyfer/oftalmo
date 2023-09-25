@@ -10,50 +10,50 @@ import Search from '../components/Search/Search'
 import MedicoConsulta from '../components/Medicos/MedicoConsulta'
 import Faq from '../components/Faq/faq'
 import FormAtendimento from '../components/FormAtendimento/FormAtendimento'
-import {useEffect, useState} from 'react'
+import {useEffect,useState} from 'react'
 import {getMedicos} from '../services/app.service'
 
 import Pagination from '@mui/material/Pagination'
-import {Box, PaginationItem, Stack} from '@mui/material'
+import {Box,PaginationItem,Stack} from '@mui/material'
 
 export default function EquipeMedica() {
-    const [listMedicos, setListMedicos] = useState([])
-    const [page, setPage] = useState(1)
-    const [listaMostrada, handleListaMostrada] = useState([])
-    const [listaEspecialidades, handleListaEspecialidades] = useState([])
-    const [especialidadeSelecionada, handleSelectEspecialidade] = useState("")
-    const [listaComFiltro, handleListaComFiltro] = useState([])
+    const [listMedicos,setListMedicos]=useState([])
+    const [page,setPage]=useState(1)
+    const [listaMostrada,handleListaMostrada]=useState([])
+    const [listaEspecialidades,handleListaEspecialidades]=useState([])
+    const [especialidadeSelecionada,handleSelectEspecialidade]=useState("")
+    const [listaComFiltro,handleListaComFiltro]=useState([])
 
-    const handlePagination = (index, page) => {
+    const handlePagination=(index,page) => {
         setPage(page)
     }
 
-    const handleSelect = (e) => handleSelectEspecialidade(e)
+    const handleSelect=(e) => handleSelectEspecialidade(e)
 
-    const search = (fired) => {
+    const search=(fired) => {
         handleListaComFiltro(listMedicos);
         findDoctorByFilter(especialidadeSelecionada)
     }
 
-    const findDoctorByFilter = (especialidade) => {
-        let novaListaFiltrada = []
+    const findDoctorByFilter=(especialidade) => {
+        let novaListaFiltrada=[]
 
     }
 
-    const updatePage = () => {
-        const lista = listMedicos
-        const fim = page * 8
-        const inicio = page * 8 - 8
-        const novaLista = lista?.slice(inicio, fim)
+    const updatePage=() => {
+        const lista=listMedicos
+        const fim=page*8
+        const inicio=page*8-8
+        const novaLista=lista?.slice(inicio,fim)
         handleListaMostrada(novaLista)
     }
 
     useEffect(() => {
         updatePage()
-    }, [page])
+    },[page])
 
     useEffect(() => {
-        const fetchMedicos = async () => {
+        const fetchMedicos=async () => {
             getMedicos()
                 .then(list => {
                     setListMedicos(list)
@@ -61,27 +61,36 @@ export default function EquipeMedica() {
                     getEspecialidadeFromList(list);
                     console.log(list);
 
-                    handleListaMostrada(list.slice(0, 8))
+                    handleListaMostrada(list.slice(0,8))
                 })
                 .catch(error => {
-                    console.log('Error: ' + error)
+                    console.log('Error: '+error)
                 })
         }
         fetchMedicos()
-    }, [])
+    },[])
 
-    const totalPages = listMedicos?.length === 0 ? 1 : Math.ceil(listMedicos?.length / 8)
+    const totalPages=listMedicos?.length===0? 1:Math.ceil(listMedicos?.length/8)
 
-    const getEspecialidadeFromList = (list) => {
-        const listaEspecialidadesFiltrada = [];
+    const getEspecialidadeFromList=(list) => {
+        const listaEspecialidadesFiltrada=[];
         list.map((item) => {
-            listaEspecialidadesFiltrada = [...listaEspecialidadesFiltrada, item?.especialidadeonmedico.map((esp) => (esp.especialidades.especialidade))]
+            listaEspecialidadesFiltrada=[...listaEspecialidadesFiltrada,item?.especialidadeonmedico.map((esp) => (esp.especialidades.especialidade))]
         })
-        const listaReduzida = listaEspecialidadesFiltrada.reduce((acc, currentValue) => acc.concat(currentValue), []);
-        const especialidadesLista = [...new Set(listaReduzida)]
+        const listaReduzida=listaEspecialidadesFiltrada.reduce((acc,currentValue) => acc.concat(currentValue),[]);
+        const especialidadesLista=[...new Set(listaReduzida)]
         handleListaEspecialidades(especialidadesLista);
     }
 
+
+    const filter=(val) => {
+        handleListaMostrada(listaMostrada.filter((esp) => {
+            if(esp.name.toLocaleLowerCase().includes(val)) {
+                return esp
+            }
+        }
+        ))
+    }
 
     return (<>
         <Banner id={2}>
@@ -111,14 +120,14 @@ export default function EquipeMedica() {
                 </div>
             </div>
         </Banner>
-        <Breadcrum title={' Equipe Médica'}/>
-        <Search id={2} options={listaEspecialidades} handleSelect={handleSelect} search={search}></Search>
+        <Breadcrum title={' Equipe Médica'} />
+        <Search id={2} options={listaEspecialidades} handleSelect={handleSelect} search={search} handleChange={filter}></Search>
         <Box spacing={2}>
             <div
                 className={'container mb-5 d-flex justify-content-between flex-wrap'}
             >
-                {listaMostrada.map((medico, i) => {
-                    return <MedicoConsulta medico={medico} key={i}/>
+                {listaMostrada.map((medico,i) => {
+                    return <MedicoConsulta medico={medico} key={i} />
                 })}
             </div>
             <div className={'container mb-5 d-flex justify-content-center'}>
@@ -131,14 +140,14 @@ export default function EquipeMedica() {
                     size="large"
                     onChange={handlePagination}
                     renderItem={item => (<PaginationItem
-                        slots={{previous: ArrowBackIcon, next: ArrowForwardIcon}}
+                        slots={{previous: ArrowBackIcon,next: ArrowForwardIcon}}
                         {...item}
                     />)}
                 />
             </div>
         </Box>
 
-        <Faq id={2}/>
-        <FormAtendimento hasContact={false}/>
+        <Faq id={2} />
+        <FormAtendimento hasContact={false} />
     </>)
 }

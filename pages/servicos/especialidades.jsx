@@ -40,8 +40,6 @@ const Especialidades=() => {
 
     }
 
-
-
     return (
         <>
             <Banner id={3} >
