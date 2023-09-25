@@ -29,7 +29,7 @@ export default function Navbar({footer}) {
         {name: 'Unidades',href: '/unidades'},
         {
             name: 'Serviços',
-            href: '',
+            href: '/servicos',
             subRoutes: [
                 {
                     name: 'Especialidades',
