@@ -67,19 +67,21 @@ const FormAtendimento=({hasContact=true}) => {
                     </div>
                     <Button dark title={'Ligue agora'} id={2} />
                   </div>
-                  <div className='d-flex align-items-center'>
-                    <div className={styles.ContactItem}>
+                  <div className={styles.ContactItem}>
+                    <div className='d-flex align-items-center'>
                       <div className={styles.ContactIcon}>
-                        <Image src={pcIcon} />
+                        <Image src={phoneIcon} />
                       </div>
                       &nbsp;
                       &nbsp;
                       &nbsp;
                       &nbsp;
-                      <p>Agendamento Online</p>
+                      <p>&nbsp;
+                        &nbsp;Agendamento online</p>
                     </div>
-                    <Button dark title={'Reserve agora'} id={2} />
+                    <Button dark title={'Reseve agora'} id={2} />
                   </div>
+
                 </div>
               </div>
             </div>

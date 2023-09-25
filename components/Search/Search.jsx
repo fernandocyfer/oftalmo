@@ -4,11 +4,15 @@ import {Button} from '../Button/Button'
 import arrowDown from '/public/icons/arrow-down.svg'
 import Image from 'next/image'
 
-const Search=({children,id,options,handleSelect,search}) => {
+const Search=({children,id,options,handleSelect,search,handleChange}) => {
 
 
     const handleEspecialidade=(e) => {
         handleSelect(e.target.value)
+    }
+
+    function getValue(e) {
+        handleChange(e)
     }
 
 
@@ -21,9 +25,10 @@ const Search=({children,id,options,handleSelect,search}) => {
                         <input
                             type="text"
                             placeholder={'Procure seu médico pelo nome'}
+                            onChange={(e) => handleChange(e.target.value)}
                         />
                         {id===2? (<>
-                            <select onChange={(e) => handleEspecialidade(e)} name="pets" id="pet-select">
+                            <select onChange={(e) => getValue(e)} name="pets" id="pet-select">
                                 <option value="">Procure seu médico por especialidade</option>
                                 {options.map((option,i) => <option key={i}
                                     value={option}>{option}</option>)}

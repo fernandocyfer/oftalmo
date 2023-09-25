@@ -13,7 +13,6 @@ const UnidadeName=({data}) => {
   const docList=data?.filter(un => un.id===idDocRender)
   const docSelected=docList[0]
 
-  console.log(docSelected)
 
   return (
     <>
@@ -46,6 +45,8 @@ const UnidadeName=({data}) => {
 export default UnidadeName
 
 export async function getServerSideProps() {
+
+  const data={}
   const API_KEY=process.env.API_TOKEN
   const API_URL=process.env.BASE_URL
   const dataToSend={
@@ -54,8 +55,11 @@ export async function getServerSideProps() {
 
   const response=await axios.get(`${API_URL}/unidade`,{
     data: dataToSend
+  }).catch((error) => {
+    data={}
   })
-  const data=response.data
+
+  data=response?.data
 
   return {
     props: {

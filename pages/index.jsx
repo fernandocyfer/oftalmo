@@ -36,15 +36,6 @@ import kids3 from '../public/banner/kids3.webp'
 import kids4 from '../public/banner/kids4.webp'
 import kids5 from '../public/banner/kids5.webp'
 
-import conv1 from '../public/logo/conv1.svg'
-import conv2 from '../public/logo/conv2.svg'
-import conv3 from '../public/logo/conv3.svg'
-import conv4 from '../public/logo/conv4.svg'
-import conv5 from '../public/logo/conv5.svg'
-
-import userIcon from '../public/icons/person-icon.svg'
-import mailIcon from '../public/icons/mail.svg'
-import telIcon from '../public/icons/call.svg'
 
 import Image from 'next/image'
 
@@ -54,11 +45,6 @@ import CardDiferencialFirst from '../components/Cards/CardDiferencialFirst'
 import CardEspecialidades from '../components/Cards/CardEspecialidades'
 import Container from '../components/Container/Container'
 
-import pcIcon from '../public/icons/pc-blue-icon.png'
-import phoneIcon from '../public/icons/phone-blue-icon.png'
-import whatsAppIcon from '../public/icons/whatsapp-blue-icon.png'
-
-import formPhoto from '../public/images/form-photo.webp'
 
 import oftalmoKids from '../public/logo/logo-oftalmokids.png'
 
@@ -71,15 +57,12 @@ import 'swiper/css/scrollbar'
 
 // Import Swiper styles
 import 'swiper/css'
-import CardDepoimentos from '../components/Cards/CardDepoimentos'
-import CardPostBlog from '../components/Cards/CardPostBlog'
-import {Accordion,Form,InputGroup} from 'react-bootstrap'
+
 import Faq from '../components/Faq/faq'
 import Depoimentos from '../components/Depoimentos/Depoimentos'
 import PlanosConvenios from '../components/PlanosConvenios/PlanosConvenios'
 import FormAtendimento from '../components/FormAtendimento/FormAtendimento'
 import MedicoSingle from '../components/Medicos/MedicoSingle'
-import MedicoConsulta from '../components/Medicos/MedicoConsulta'
 import {useEffect,useState} from 'react'
 import {getMedicos} from '../services/app.service'
 import Modal from "../components/Modal/Modal";
