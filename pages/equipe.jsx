@@ -108,7 +108,7 @@ export default function EquipeMedica() {
                             <Button
                                 title={'Agendar consulta'}
                                 id={10}
-                                to={'https://web.whatsapp.com/send?phone=552124961161&text=Olá, desejo agendar uma consulta'}
+                                to={'https://wa.me/552124961161?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta'}
                             />
                             <Button
                                 title={'Emergência Oftalmológica'}
