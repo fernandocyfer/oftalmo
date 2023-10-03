@@ -9,13 +9,19 @@ import iconArrowError from '../../public/icons/iconArrowError404.svg'
 import arrowLeftOrange from '/public/icons/arrowLeftOrange.svg'
 import location from '../../public/icons/location_on.svg'
 
-export function Button({style, type, title, id, to, icon, dark = false, fire}) {
+export function Button({style, type, title, id, to, icon, dark = false, fire, target}) {
 
-    return (fire ? (<button
-        onClick={() => fire(true)}
+    const isBlank = target === '_blank';
+    const targetAttr = isBlank ? '_blank' : undefined;
+   
+
+    return (fire ? (
+    <button
+        onClick={() => fire(false)}
         style={style}
         className={id == 1 ? styles.btn_primary : id == 2 ? styles.btn_secondary : id == 3 ? styles.btn_thirdhary : id == 4 ? styles.btn_fourthary : id == 5 ? styles.btn_fivethary : id == 6 ? styles.btn_six : id == 7 ? styles.btn_seven : id == 8 ? styles.btn_eight : id == 10 ? styles.btn_ninethary : id == 11 ? styles.btn_eleven : id == 12 ? styles.btn_twelve : id == 15 ? styles.btn_fifty : id == 13 ? styles.btn_treze : id == 14 ? styles.btn_quatorze : null}
         type={type}
+        target="_blank"
     >
         {id == 8 ? (<svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,6 +54,7 @@ export function Button({style, type, title, id, to, icon, dark = false, fire}) {
         {id == 12 ? (<Image src={whatsAppButtonDois} id="iconWhatsButtonDois"/>) : null}
         {id == 13 ? <Image src={iconArrowError} id="iconArrowError"/> : null}
     </button>) : (<Link href={to ? to : ''}>
+    <a href={to ? to : ''} target={targetAttr} rel={isBlank ? 'noopener noreferrer' : undefined}>
         <button
             style={style}
             className={id == 1 ? styles.btn_primary : id == 2 ? styles.btn_secondary : id == 3 ? styles.btn_thirdhary : id == 4 ? styles.btn_fourthary : id == 5 ? styles.btn_fivethary : id == 6 ? styles.btn_six : id == 7 ? styles.btn_seven : id == 8 ? styles.btn_eight : id == 10 ? styles.btn_ninethary : id == 11 ? styles.btn_eleven : id == 12 ? styles.btn_twelve : id == 15 ? styles.btn_fifty : id == 13 ? styles.btn_treze : id == 14 ? styles.btn_quatorze : null}
@@ -84,5 +91,6 @@ export function Button({style, type, title, id, to, icon, dark = false, fire}) {
             {id == 12 ? (<Image src={whatsAppButtonDois} id="iconWhatsButtonDois"/>) : null}
             {id == 13 ? <Image src={iconArrowError} id="iconArrowError"/> : null}
         </button>
+        </a>
     </Link>))
 }
