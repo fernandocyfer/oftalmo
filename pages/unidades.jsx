@@ -5,6 +5,8 @@ import {Accordion} from 'react-bootstrap'
 import Image from 'next/image'
 import unidadeIcon from '../public/icons/unidadesIcon.svg'
 
+import Breadcrum from '../components/BreadCrumb/Breadcrum'
+
 import unidadeBarra from '../public/unidades/Barra.png'
 import unidadeTijuca from '../public/unidades/Tijuca.png'
 import unidadeBotafogoSul from '../public/unidades/Botafogo.png'
@@ -74,9 +76,11 @@ export default function Unidades({data}) {
                     </div>
                 </SingleContainer>
             </Banner>
+            <Breadcrum to={'unidades'} title={' Unidades'} />
 
 
-            <div className={styles.breadUnidades}>
+
+            {/* <div className={styles.breadUnidades}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -86,7 +90,7 @@ export default function Unidades({data}) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className={styles.unidadesContainer}>
                 <div className="container">

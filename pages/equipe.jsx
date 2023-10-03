@@ -121,7 +121,7 @@ export default function EquipeMedica() {
                 </div>
             </div>
         </Banner>
-        <Breadcrum title={' Equipe Médica'} />
+        <Breadcrum to={'equipe'} title={' Equipe Médica'} />
         <Search id={2} options={listaEspecialidades} handleSelect={handleSelect} search={search} handleChange={filter}></Search>
         <Box spacing={2}>
             <div

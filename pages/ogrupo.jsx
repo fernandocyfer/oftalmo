@@ -42,7 +42,7 @@ const ogrupo=() => (<>
         </SingleContainer>
 
     </Banner>
-    <Breadcrum title={' O Grupo'} />
+    <Breadcrum to={'ogrupo'} title={' O Grupo'} />
 
     <div className={'p-5'}
         style={{background: 'radial-gradient(76.26% 198.87% at 50% 50.06%, #1085E5 0%, #0C52DB 100%)'}}>

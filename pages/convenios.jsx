@@ -132,7 +132,7 @@ export default function Convenios() {
                 <Button title={'Emergência Oftalmológica'} id={6} />
             </SingleContainer>
         </Banner>
-        <Breadcrum title={' Convênios'} />
+        <Breadcrum to={'convenios'} title={' Convênios'} />
         <Search id={3} handleChange={filter}>
 
             <Swiper
