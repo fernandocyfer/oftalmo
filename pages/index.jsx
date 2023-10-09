@@ -104,7 +104,8 @@ export default function Home({}) {
                                 <Button
                                     title={'Agendar consulta'}
                                     id={10}
-                                    to={'https://web.whatsapp.com/send?phone=552124961161&text='}
+                                    target="_blank"
+                                    to={'https://wa.me/5512212491116?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta.'}
                                 />
                                 <Button
                                     title={'Emergências 24h'}
@@ -157,7 +158,7 @@ export default function Home({}) {
                 />
             </div>
             <div className="container d-flex justify-content-center pb-5 mb-5 mt-5">
-                <Button title={'Agendar consultar e exames'} id={10} to={'/'} />
+                <Button title={'Agendar consultar e exames'} id={10} to={''} />
             </div>
         </div>
 
@@ -234,7 +235,12 @@ export default function Home({}) {
                                 </div>
                             </div>
                             <div className={styles.unidadesBtnDois}>
-                                <Button title={'Agendar consultas e exames'} id={12} />
+                                <Button 
+                                title={'Agendar consultas e exames'} 
+                                id={12}
+                                target="_blank"
+                                to={'https://wa.me/5512212491116?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta.'}
+                                />
                             </div>
                         </div>
                     </div>
@@ -299,7 +305,7 @@ export default function Home({}) {
                 <div className={styles.mtodoido}>
                     <CardEspecialidades
                         title={'Cirurgia de Catarata'}
-                        href={'/especialidades/Cirurgia de Catarata'}
+                        href={'/servicos/especialidades/Cirurgia de Catarata'}
                         image={cardEspecialidades1}
                     />
                     <CardEspecialidades
