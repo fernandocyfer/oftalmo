@@ -172,7 +172,7 @@ export default function Navbar({footer}) {
                 </div>
 
                 <div className="navMobileAg">
-                    <Button title={'AGENDE AGORA'} id={1} to={'https://web.whatsapp.com/send?phone=552124961161&text='}
+                    <Button title={'AGENDE AGORA'} id={1} to={'https://wa.me/5512212491116?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta.'}
                     />
                 </div>
 
