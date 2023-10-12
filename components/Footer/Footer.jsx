@@ -3,10 +3,11 @@ import logo from '../../public/white-logo.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import faceIcon from '../../public/icons/social/Facebook.svg'
-import twitterIcon from '../../public/icons/social/Twitter.svg'
+// import twitterIcon from '../../public/icons/social/Twitter.svg'
 import instaIcon from '../../public/icons/social/Instagram.svg'
-import gitIcon from '../../public/icons/social/Github.svg'
+// import gitIcon from '../../public/icons/social/Github.svg'
 import linkedinIcon from '../../public/icons/social/LinkedIn.svg'
+
 
 const Footer = () => {
     return (
@@ -34,23 +35,23 @@ const Footer = () => {
                             <div>
                                 <ul className="footerMenuUm">
                                     <li>
-                                        <Link href={'/'}>Equipe Médica</Link>
+                                        <Link href={'/equipe'}>Equipe Médica</Link>
                                     </li>
                                     <li>
-                                        <Link href={'/'}>Convênios</Link>
+                                        <Link href={'/convenios'}>Convênios</Link>
                                     </li>
                                     <li>
-                                        <Link href={'/'}>Unidades</Link>
+                                        <Link href={'/unidades'}>Unidades</Link>
                                     </li>
                                 </ul>
                             </div>
                             <div>
                                 <ul className="footerMenuDois">
                                     <li>
-                                        <Link href={'/'}>Serviços</Link>
+                                        <Link href={'/servicos/especialidades'}>Serviços</Link>
                                     </li>
                                     <li>
-                                        <Link href={'/'}>Aprenda Mais</Link>
+                                        <Link href={'https://wordpress-576870-3751630.cloudwaysapps.com/'}>Aprenda Mais</Link>
                                     </li>
                                     <li>
                                         <Link href={'/'}>Política & Privacidade</Link>
@@ -75,27 +76,27 @@ const Footer = () => {
                             <div className="col-12 d-flex">
                                 <ul className="d-flex align-items-center">
                                     <li>
-                                        <Link href={'/'} target={'_blank'}>
+                                        <Link href={'https://www.facebook.com/AmericasOftalmocenter/'} target={'_blank'}>
                                             <Image src={faceIcon}/>
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link href={'/'} target={'_blank'}>
                                             <Image src={twitterIcon}/>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li>
-                                        <Link href={'/'} target={'_blank'}>
+                                        <Link href={'https://www.instagram.com/americasoftalmocenter/'} target={'_blank'}>
                                             <Image src={instaIcon}/>
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link href={'/'} target={'_blank'}>
                                             <Image src={gitIcon}/>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li>
-                                        <Link href={'/'} target={'_blank'}>
+                                        <Link href={'https://www.youtube.com/channel/UCjZHnvksQAJMevlARmi-T9A'} target={'_blank'}>
                                             <Image src={linkedinIcon}/>
                                         </Link>
                                     </li>

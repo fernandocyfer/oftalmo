@@ -40,7 +40,7 @@ const FormAtendimento=({hasContact=true}) => {
               <div className="col-12">
                 <div className={styles.Contact}>
                   <div className={styles.ContactItem}>
-                    <div className='d-flex align-items-center'>
+                    <div className='d-flex align-items-center flex-lg-column flex-row'>
                       <div className={styles.ContactIcon}>
                         <Image src={whatsAppIcon} />
                       </div>
@@ -51,10 +51,10 @@ const FormAtendimento=({hasContact=true}) => {
                       <p>(21) 2496-1161</p>
                     </div>
 
-                    <Button dark title={'Converse pelo WhatsApp'} id={2} />
+                    <Button dark title={'Converse pelo WhatsApp'} id={2} target="_blank" to={'https://wa.me/5512212491116?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta.'} />
                   </div>
                   <div className={styles.ContactItem}>
-                    <div className='d-flex align-items-center'>
+                    <div className='d-flex align-items-center flex-lg-column flex-row'>
                       <div className={styles.ContactIcon}>
                         <Image src={phoneIcon} />
                       </div>
@@ -65,10 +65,10 @@ const FormAtendimento=({hasContact=true}) => {
                       <p>(21) 2496-1161</p>
 
                     </div>
-                    <Button dark title={'Ligue agora'} id={2} />
+                    <Button dark title={'Ligue agora'} id={2} to={'tel:2124961161'}/>
                   </div>
                   <div className={styles.ContactItem}>
-                    <div className='d-flex align-items-center'>
+                    <div className='d-flex align-items-center flex-lg-column flex-row'>
                       <div className={styles.ContactIcon}>
                         <Image src={phoneIcon} />
                       </div>
@@ -79,7 +79,7 @@ const FormAtendimento=({hasContact=true}) => {
                       <p>&nbsp;
                         &nbsp;Agendamento online</p>
                     </div>
-                    <Button dark title={'Reseve agora'} id={2} />
+                    <Button dark title={'Reseve agora'} id={2} target="_blank" to={'https://wa.me/552124961161?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta'} />
                   </div>
 
                 </div>
