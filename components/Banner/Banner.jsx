@@ -33,7 +33,7 @@ export default function Banner(props) {
             }:id===9? {
                 background: `url('${cirurgias.src}')`,height: '711px'
             }:id===2? {
-                background: `url('${equipeBanner.src}')`,height: '711px'
+                background: `url('${equipeBanner.src}')`,height: '711px',backgroundPosition: 'top'
             }:id===4? {
                 background: `url('${convBanner.src}')`,height: '711px'
             }:id===7? {
