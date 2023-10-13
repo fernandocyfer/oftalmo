@@ -9,11 +9,15 @@ import {Button} from '../components/Button/Button'
 import bookImage from '/public/images/book.svg'
 import selo from '/public/icons/selo.svg'
 
-import kids1 from '../public/banner/kids1.webp'
-import kids2 from '../public/banner/kids2.webp'
-import kids3 from '../public/banner/kids3.webp'
-import kids4 from '../public/banner/kids4.webp'
-import kids5 from '../public/banner/kids5.webp'
+import kids1 from '../public/banner/kids01.webp'
+import kids2 from '../public/banner/kids02.webp'
+import kids3 from '../public/banner/kids03.webp'
+import kids4 from '../public/banner/kids04.webp'
+import kids5 from '../public/banner/kids05.webp'
+import kids6 from '../public/banner/kids06.webp'
+import kids7 from '../public/banner/kids07.webp'
+import kids8 from '../public/banner/kids08.webp'
+import kids9 from '../public/banner/kids09.webp'
 
 import fam1 from '../public/images/fam1.svg'
 import fam2 from '../public/images/fam2.svg'
@@ -218,25 +222,22 @@ const Oftalmokids = () => {
                             </SwiperSlide>
 
                             <SwiperSlide>
+                                <Image src={kids6}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids7} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids8} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids9} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
                                 <Image src={kids1}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids2}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids3}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids4}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids5}/>
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <Image src={kids1}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
                                 <Image src={kids2}/>
                             </SwiperSlide>
                             <SwiperSlide>
@@ -247,6 +248,9 @@ const Oftalmokids = () => {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Image src={kids5}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids6}/>
                             </SwiperSlide>
                         </Swiper>
                     </div>
