@@ -307,12 +307,12 @@ export default function Home({}) {
                     />
                     <CardEspecialidades
                         title={'Vitrectomia'}
-                        href={'/servicos/especialidades/Vitrectomia'}
+                        href={'/servicos/especialidades/vitrectomia'}
                         image={cardEspecialidades3}
                     />
                     <CardEspecialidades
                         title={'Cirurgia de refrativa'}
-                        href={'/servicos/especialidades/Cirurgia de refrativa'}
+                        href={'/servicos/especialidades/cirurgia_de_refrativa'}
                         image={cardEspecialidades4}
                     />
                     <CardEspecialidades
@@ -327,12 +327,12 @@ export default function Home({}) {
                     />
                     <CardEspecialidades
                         title={'Cirurgia Antiglaucomatosa'}
-                        href={'/servicos/especialidades/Cirurgia Antiglaucomatosa'}
+                        href={'/servicos/especialidades/cirurgia_antiglaucomatosa'}
                         image={cardEspecialidades7}
                     />
                     <CardEspecialidades
                         title={'Lentes de contato'}
-                        href={'/servicos/especialidades/Lentes de contato'}
+                        href={'/servicos/especialidades/lentes_de_contato'}
                         image={cardEspecialidades8}
                     />
                 </div>
@@ -351,7 +351,7 @@ export default function Home({}) {
                 </div>
                 <div className={styles.SectionFourActionButton}>
                     <p>Entre em contato com a gente para agendar sua consulta.</p>
-                    <Button to={'https://web.whatsapp.com/send?phone=552124961161&text='} title={'Agendar consultas e exames'} id={1} />
+                    <Button to={'https://wa.me/5512212491116?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta.'} title={'Agendar consultas e exames'} id={1} target="_blank" />
                 </div>
             </Container>
         </div>
