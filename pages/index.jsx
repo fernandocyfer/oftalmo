@@ -10,6 +10,8 @@ import estetoFormIcon from '../public/icons/estetoFormIcon.svg'
 import containerBackgroundDois from '../public/images/videosct2.png'
 
 import Merda from '../components/Blog/Posts'
+import VideoSlideteste from '../components/VideoSlider/slider'
+
 
 import containerBackgroundDoisMobile from '../public/mobile/videomobilebg.svg'
 
@@ -54,6 +56,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+
 
 // Import Swiper styles
 import 'swiper/css'
@@ -152,11 +155,13 @@ export default function Home({}) {
             <div className="container p-4">
                 <Image
                     src={containerBackgroundDoisMobile}
-                    alt={'Criança realizando exame'}
-                    title={'Criança realizando exame'}
+                    alt={'Criança realizando exame kkkkk'}
+                    title={'Criança realizando exame kkkkkkkkk'}
                     layout={'responsive'}
                 />
             </div>
+
+            
             <div className="container d-flex justify-content-center pb-5 mb-5 mt-5">
                 <Button title={'Agendar consultar e exames'} id={10} to={''} />
             </div>
@@ -164,22 +169,9 @@ export default function Home({}) {
 
         <div className={styles.SectionTwo}>
             <div className={styles.SectionTwo_container}>
-                <div
-                    className="container d-flex align-items-center justify-content-center"
-                    id="containerDoisSobreposto"
-                    style={{background: ''}}
-                >
-                    <div className="col-4" style={{cursor: 'pointer'}}
-                        onClick={() => console.log("clicou")}
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                    >
-                        <Image
-                            src={containerBackgroundDois}
-                            alt={'Criança realizando exame'}
-                            title={'Criança realizando exame'}
-                            layout={'responsive'}
-                        />
+                <div className="container d-flex align-items-center justify-content-center" id="containerDoisSobreposto">
+                    <div className="col-4">
+                        <VideoSlideteste />
                     </div>
                     <div className="col-8">
                         <div className={styles.SectionTwo_boxTwo}>
@@ -515,10 +507,10 @@ export default function Home({}) {
         <Faq id={1} />
 
         <FormAtendimento />
-        <Modal body={<iframe width="100%" height="300" src="https://www.youtube.com/embed/S4plMxPsShA"
-            title="Ceratocone - Dra. Evelyn Ciuffo" frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen></iframe>} />
+        {/* // <Modal body={<iframe width="100%" height="300" src="https://www.youtube.com/embed/S4plMxPsShA"
+        //     title="Ceratocone - Dra. Evelyn Ciuffo" frameBorder="0"
+        //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        //     allowFullScreen></iframe>} /> */}
 
     </>)
 }
