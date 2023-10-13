@@ -10,7 +10,7 @@ import estetoFormIcon from '../public/icons/estetoFormIcon.svg'
 import containerBackgroundDois from '../public/images/videosct2.png'
 
 import Merda from '../components/Blog/Posts'
-import VideoSlideteste from '../components/VideoSlider/slider'
+import VideoSlide from '../components/VideoSlider/slider'
 
 
 import containerBackgroundDoisMobile from '../public/mobile/videomobilebg.svg'
@@ -171,7 +171,7 @@ export default function Home({}) {
             <div className={styles.SectionTwo_container}>
                 <div className="container d-flex align-items-center justify-content-center" id="containerDoisSobreposto">
                     <div className="col-4">
-                        <VideoSlideteste />
+                        <VideoSlide />
                     </div>
                     <div className="col-8">
                         <div className={styles.SectionTwo_boxTwo}>
@@ -297,12 +297,12 @@ export default function Home({}) {
                 <div className={styles.mtodoido}>
                     <CardEspecialidades
                         title={'Cirurgia de Catarata'}
-                        href={'/servicos/especialidades/Cirurgia de Catarata'}
+                        href={'/servicos/especialidades/catarata'}
                         image={cardEspecialidades1}
                     />
                     <CardEspecialidades
                         title={'Crosslinking'}
-                        href={'/servicos/especialidades/Crosslinking'}
+                        href={'/servicos/especialidades/crosslinking'}
                         image={cardEspecialidades2}
                     />
                     <CardEspecialidades

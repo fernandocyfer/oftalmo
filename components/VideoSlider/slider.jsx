@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import VideoPlayImage from '../../public/icons/play_circle.svg';
+import Image from 'next/image'
+
 
 const videos = [
   {
@@ -54,12 +57,18 @@ const YouTubeCarousel = () => {
               <a
                 onClick={() => openModal(video.id)}
               >
+               <div className='playVideoImage'>
+                  <Image
+                  src={VideoPlayImage}
+                  />
+               </div>
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   width="380"
                   height="225"
                 />
+                
               </a>
             </div>
           ))}
@@ -90,6 +99,7 @@ const YouTubeCarousel = () => {
             key={video.id}
             onClick={() => openModal(video.id)}
           >
+            
             <img
               src={video.thumbnail}
               alt={video.title}
@@ -106,7 +116,7 @@ const YouTubeCarousel = () => {
         <Modal.Body>
           <iframe
             width="100%"
-            height="400"
+            height="460"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube video"
             allowFullScreen
