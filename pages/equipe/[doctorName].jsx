@@ -89,12 +89,14 @@ const DoctorPage = ({data}) => {
             </div>
             <div
                 className={
-                    'container-xl m-5 text-center d-flex justify-content-center align-items-center'
+                    'container d-flex justify-content-center align-items-center flex-column'
                 }
             >
-                <h3>Trabalhos Publicados, Aulas, Palestras e Apresentação de Casos:</h3>
-                <br/>
-                <p>{docSelected?.trabalhos}</p>
+                <div className='row'>
+                    <h3>Trabalhos Publicados, Aulas, Palestras e Apresentação de Casos:</h3>
+                    <br/>
+                    <p>{docSelected?.trabalhos}</p>
+                </div>
             </div>
         </>
     )
