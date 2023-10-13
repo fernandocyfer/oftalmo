@@ -32,11 +32,16 @@ import cardEspecialidades8 from '../public/images/especialidades-8.svg'
 import locationIcon from '../public/images/location2.png'
 import oftalmoPic from '../public/images/oftalmokids.svg'
 
-import kids1 from '../public/banner/kids1.webp'
-import kids2 from '../public/banner/kids2.webp'
-import kids3 from '../public/banner/kids3.webp'
-import kids4 from '../public/banner/kids4.webp'
-import kids5 from '../public/banner/kids5.webp'
+import kids1 from '../public/banner/kids01.webp'
+import kids2 from '../public/banner/kids02.webp'
+import kids3 from '../public/banner/kids03.webp'
+import kids4 from '../public/banner/kids04.webp'
+import kids5 from '../public/banner/kids05.webp'
+import kids6 from '../public/banner/kids06.webp'
+import kids7 from '../public/banner/kids07.webp'
+import kids8 from '../public/banner/kids08.webp'
+import kids9 from '../public/banner/kids09.webp'
+
 
 
 import Image from 'next/image'
@@ -48,7 +53,7 @@ import CardEspecialidades from '../components/Cards/CardEspecialidades'
 import Container from '../components/Container/Container'
 
 
-import oftalmoKids from '../public/logo/logo-oftalmokids.png'
+import oftalmoKids from '../public/logo/logo-oftalmokids2.png'
 
 import {Swiper,SwiperSlide} from 'swiper/react'
 import {Navigation,Pagination,Scrollbar,A11y} from 'swiper'
@@ -385,7 +390,7 @@ export default function Home({}) {
                     </div>
                     <div className="col-lg-7 col-md-7  d-flex flex-column">
                         <div className={styles.oftalmoKids}>
-                            <Image src={oftalmoKids} />
+                            <Image src={oftalmoKids} width={105} height={70}/>
                         </div>
                         <Button title={'Oftalmolofia infantil'} id={11} />
                         <Container
@@ -445,25 +450,22 @@ export default function Home({}) {
                             </SwiperSlide>
 
                             <SwiperSlide>
+                                <Image src={kids6} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids7} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids8} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids9} width={206} height={136}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
                                 <Image src={kids1} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids2} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids3} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids4} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids5} />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <Image src={kids1} />
-                            </SwiperSlide>
-                            <SwiperSlide>
                                 <Image src={kids2} />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -474,6 +476,9 @@ export default function Home({}) {
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Image src={kids5} />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image src={kids6} />
                             </SwiperSlide>
                         </Swiper>
                     </div>
