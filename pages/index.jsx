@@ -73,8 +73,8 @@ import FormAtendimento from '../components/FormAtendimento/FormAtendimento'
 import MedicoSingle from '../components/Medicos/MedicoSingle'
 import {useEffect,useState} from 'react'
 import {getMedicos} from '../services/app.service'
-import Modal from "../components/Modal/Modal";
-import {useWindowSize} from "@uidotdev/usehooks";
+import ModalKids from "../components/Modal/SlideKids"
+import {useWindowSize} from "@uidotdev/usehooks"
 
 export default function Home({}) {
     const [listaMostrada,handleListaMostrada]=useState([])
@@ -381,7 +381,7 @@ export default function Home({}) {
         <div className={styles.SectionSeven}>
             <div
                 className="container"
-                style={{background: 'rgba(207, 207, 207, 0.15)'}}
+                style={{paddingBottom:'64px',background: 'rgba(207, 207, 207, 0.15)'}}
             >
                 <div className={'d-lg-flex d-md-flex flex-lg-row flex-sm-column'}>
 
@@ -420,69 +420,11 @@ export default function Home({}) {
                 className="container"
                 style={{background: 'rgba(207, 207, 207, 0.15)'}}
             >
-                <div>
-                    <div className={styles.slideKids}>
-                        <Swiper
-                            modules={[Navigation,Pagination,Scrollbar,A11y]}
-                            spaceBetween={15}
-                            slidesPerView={size.width>='770'? 5:1}
-                            Autoplay={true}
-                            HashNavigation={true}
-                            grabCursor={true}
-                            onSlideChange={() => console.log('slide change')}
-                            onSwiper={swiper => console.log(swiper)}
-                            navigation
-                        >
-                            <SwiperSlide>
-                                <Image src={kids1} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids2} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids3} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids4} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids5} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <Image src={kids6} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids7} width={206} height={136}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids8} width={206} height={136}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids9} width={206} height={136}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids1} />
-                            </SwiperSlide>
-
-                            <SwiperSlide>
-                                <Image src={kids2} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids3} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids4} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids5} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image src={kids6} />
-                            </SwiperSlide>
-                        </Swiper>
-                    </div>
-                </div>
+                
+                    
+                        <ModalKids />
+                    
+                
             </div>
         </div>
 
